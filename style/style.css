@@ -1,0 +1,333 @@
+/* Fonts */
+
+@font-face {
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url(../font/GothamPro.woff) format("woff");
+}
+
+@font-face {
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url(../font/GothamPro-Bold.woff) format("woff");
+}
+
+@font-face {
+    font-family: Ponter;
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url(../font/ponter.ttf) format("truetype");
+}
+
+/* Global */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    padding: 0;
+    max-width: 1920px;
+    font-family: "Gotham Pro", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.12em;
+    color: #250404;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+
+    border: 0;
+
+    clip: rect(0 0 0 0);
+}
+
+.button {
+    display: block;
+    width: 270px;
+    height: 48px;
+    padding: 18px 70px 17px;
+    font: inherit;
+    text-align: center;
+    background: linear-gradient(90.07deg, #FF0500 3.25%, #E20400 100%);
+    box-shadow: 0 9px 30px rgba(255, 0, 31, 0.2);
+    clip-path: polygon(7% 0, 100% 0, 100% 65%, 93% 100%, 0 100%, 0 35%);
+
+}
+
+
+/* Page-header */
+
+.page-header {
+    font-size: 14px;
+    line-height: 13px;
+}
+
+.page-header__top {
+    padding: 7px 0;
+    background: linear-gradient(90.07deg, #FF0500 3.25%, #E20400 100%);
+    height: 76px;
+}
+
+.page-header::after {
+    position: absolute;
+    top: 0;
+    content: "";
+    width: 100%;
+    max-height: 62px;
+    background-image: url("../img/print.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.page-header__list {
+    width: 1169px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+}
+
+.page-header__logo-text {
+    margin-top: 4px;
+    display: block;
+    font-size: 11px;
+    line-height: 11px;
+    text-align: center;
+    letter-spacing: -0.08em;
+    text-transform: uppercase;
+}
+
+.page-header__button {
+    display: none;
+}
+
+.nav-site {
+    height: 49px;
+}
+
+.nav-site__list {
+    width: 1169px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-site__link {
+    position: relative;
+    padding-left: 24px;
+    line-height: 13px;
+}
+
+.nav-site__link--catalog::before {
+    position: absolute;
+    content: "";
+    top: -3px;
+    background: url("../img/catalog.svg");
+    width: 16px;
+    height: 16px;
+    margin-left: -24px;
+}
+
+.nav-site__link--price::before {
+    position: absolute;
+    content: "";
+    top: -3px;
+    background: url("../img/price.svg");
+    width: 16px;
+    height: 16px;
+    margin-left: -24px;
+}
+
+.nav-site__link--pay::before {
+    position: absolute;
+    content: "";
+    top: -3px;
+    background: url("../img/pay.svg");
+    width: 20px;
+    height: 16px;
+    margin-left: -24px;
+}
+
+.nav-site__link--faq::before {
+    position: absolute;
+    content: "";
+    top: -3px;
+    background: url("../img/faq.svg");
+    width: 20px;
+    height: 16px;
+    margin-left: -24px;
+}
+
+.nav-site__link--about::before {
+    position: absolute;
+    content: "";
+    top: -3px;
+    background: url("../img/about.svg");
+    width: 16px;
+    height: 16px;
+    margin-left: -24px;
+}
+
+.nav-site__link--contacts::before {
+    position: absolute;
+    content: "";
+    top: -3px;
+    background: url("../img/contacts.svg");
+    width: 12px;
+    height: 16px;
+    margin-left: -24px;
+}
+
+.page-header a:focus,
+.page-header a:hover {
+    opacity: 0.7;
+}
+
+/* Section-main */
+
+.section-main {
+    background-image: url("../img/bgDesk.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 535px;
+}
+
+.section-main__overlay {
+    width: 100%;
+    height: 100%;
+    padding-top: 132px;
+    padding-left: 374px;
+    background: linear-gradient(122.52deg, rgba(99, 61, 38, 0.14) -1.29%, rgba(99, 61, 38, 0.6) 97.1%);
+    color: #ffffff;
+}
+
+.section-main__title {
+    width: 650px;
+    margin-bottom: 8px;
+    font-family: Ponter, sans-serif;
+    font-size: 48px;
+    line-height: 48px;
+    text-transform: uppercase;
+}
+
+.section-main__subtitle {
+    margin-bottom: 16px;
+}
+
+/* Products */
+
+.products {
+    padding: 112px 375px;
+}
+
+.products__title {
+    width: 770px;
+    margin: 0 auto 61px;
+    font-family: Ponter, sans-serif;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+}
+
+.products__wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 56px;
+}
+
+.products__card {
+    width: 270px;
+    padding: 19px 16px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 30px rgba(114, 114, 114, 0.1);
+}
+
+.card__descr {
+    margin-bottom: 16px;
+    font-size: 24px;
+    line-height: 23px;
+    text-align: center;
+}
+
+.card__price--new {
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 23px;
+    color: #DA1713;
+}
+
+.card__price--old {
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 13px;
+    text-decoration: line-through;
+}
+
+.card__button {
+    display: none;
+    width: 222px;
+    height: 38px;
+    margin: 0 auto;
+    padding: 13px 24px 12px 25px;
+    font-size: 14px;
+    line-height: 13px;
+    color: #DA1713;
+    background: #FFFFFF;
+    border: 1px solid #DA1713;
+    text-shadow: 0 9px 35px rgba(255, 0, 31, 0.5);
+}
+
+
+.card--active {
+    display: block;
+}
+
+.products__button {
+    margin: 0 auto;
+    color: #ffffff;
+}
