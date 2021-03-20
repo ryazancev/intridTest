@@ -460,10 +460,13 @@ h1, h2, h3, h4, h5, h6, p {
         height: 26px;
         border: none;
         cursor: pointer;
+        outline: none;
     }
 
     .page-header__button.page-header__button--active {
         background: url("../img/cross.svg") no-repeat 0 0;
+        width: 18px;
+        height: 18px;
     }
 
     .page-header__link--tel {
