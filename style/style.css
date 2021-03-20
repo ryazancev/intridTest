@@ -29,6 +29,7 @@
 *,
 *::before,
 *::after {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -86,13 +87,17 @@ h1, h2, h3, h4, h5, h6, p {
     font: inherit;
     text-align: center;
     background: linear-gradient(90.07deg, #FF0500 3.25%, #E20400 100%);
+    -webkit-box-shadow: 0 9px 30px rgba(255, 0, 31, 0.2);
     box-shadow: 0 9px 30px rgba(255, 0, 31, 0.2);
+    -webkit-clip-path: polygon(7% 0, 100% 0, 100% 65%, 93% 100%, 0 100%, 0 35%);
     clip-path: polygon(7% 0, 100% 0, 100% 65%, 93% 100%, 0 100%, 0 35%);
+    -webkit-transition: all .25s cubic-bezier(.02, .01, .47, 1);
     transition: all .25s cubic-bezier(.02, .01, .47, 1);
 }
 
 .button:focus,
 .button:hover {
+    -webkit-transform: translate(0, -6px);
     transform: translate(0, -6px);
 }
 
@@ -124,8 +129,14 @@ h1, h2, h3, h4, h5, h6, p {
     width: 1169px;
     margin: 0 auto;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     color: #ffffff;
 }
@@ -156,8 +167,14 @@ h1, h2, h3, h4, h5, h6, p {
     width: 1169px;
     margin: 0 auto;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -281,8 +298,13 @@ h1, h2, h3, h4, h5, h6, p {
 
 .products__wrapper {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     width: 1170px;
     margin: 0 auto 28px;
@@ -308,6 +330,7 @@ h1, h2, h3, h4, h5, h6, p {
     height: 119px;
     background: url(../img/garlicTop.png) 0 0;
     background-size: cover;
+    -webkit-transform: rotate(15deg);
     transform: rotate(15deg);
 }
 
@@ -319,12 +342,15 @@ h1, h2, h3, h4, h5, h6, p {
     margin-right: 30px;
     margin-bottom: 30px;
     background: #ffffff;
+    -webkit-box-shadow: 0 2px 30px rgba(114, 114, 114, 0.1);
     box-shadow: 0 2px 30px rgba(114, 114, 114, 0.1);
+    -webkit-transition: all .25s cubic-bezier(.02, .01, .47, 1);
     transition: all .25s cubic-bezier(.02, .01, .47, 1);
 }
 
 .products__card:focus,
 .products__card:hover {
+    -webkit-transform: translate(0, -6px);
     transform: translate(0, -6px);
 }
 
@@ -365,7 +391,9 @@ h1, h2, h3, h4, h5, h6, p {
     color: #DA1713;
     background: url("../img/button.svg") no-repeat;
     text-shadow: 0 9px 35px rgba(255, 0, 31, 0.5);
+    -webkit-box-shadow: none;
     box-shadow: none;
+    -webkit-clip-path: none;
     clip-path: none;
 }
 
@@ -593,7 +621,9 @@ h1, h2, h3, h4, h5, h6, p {
         line-height: 13px;
         color: #DA1713;
         background: url("../img/buttonMobile.svg") no-repeat;
+        -webkit-box-shadow: none;
         box-shadow: none;
+        -webkit-clip-path: none;
         clip-path: none;
     }
 }
