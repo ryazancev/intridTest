@@ -16,7 +16,10 @@
     <div class="page-header__top">
         <ul class="page-header__list">
             <li class="page-header__item">
-                <a class="page-header__link" href="tel:+ 7 (919) 249 39 94">+ 7 (919) 249 39 94</a>
+                <a class="page-header__link tel" href="tel:+ 7 (919) 249 39 94">
+                    <span class="page-header__link--tel">+ 7 (919) 249 39 94</span>
+                    <span class="page-header__link--img"></span>
+                </a>
             </li>
             <li class="page-header__item">
                 <a class="page-header__link" href="">
@@ -24,16 +27,19 @@
                 </a>
                 <span class="page-header__logo-text">Техника для чеснока</span>
             </li>
-            <li class="page-header__item">
+            <li class="page-header__item page-header__item--map">
                 <a class="page-header__link" href="https://yandex.ru/maps/-/CCUUQSh3HA">Воронеж, пр-т Патриотов,
                     11/3</a>
             </li>
+            <li class="page-header__item page-header__item--button ">
+                <button class="page-header__button" id="burger" type="button"></button>
+            </li>
         </ul>
 
-        <button class="page-header__button" id="burger" type="button"></button>
+
     </div>
 
-    <nav class="page-header__nav nav-site">
+    <nav class="page-header__nav nav-site menu-close">
         <ul class="nav-site__list">
             <li class="nav-site__item">
                 <a class="nav-site__link nav-site__link--catalog" href="#">Каталог техники</a>
@@ -82,6 +88,7 @@
                 <ul class="card__list">
                     <li class="card__img">
                         <picture>
+                            <source srcset="./img/cardSmall.png" media="(max-width: 768px)">
                             <img src="./img/card-1.png" alt="Машинка очистки чеснока">
                         </picture>
                     </li>
@@ -96,6 +103,7 @@
                 <ul class="card__list">
                     <li class="card__img">
                         <picture>
+                            <source srcset="./img/cardSmall.png" media="(max-width: 768px)">
                             <img src="./img/card-2.png" alt="Машинка очистки чеснока">
                         </picture>
                     </li>
@@ -110,6 +118,7 @@
                 <ul class="card__list">
                     <li class="card__img">
                         <picture>
+                            <source srcset="./img/cardSmall.png" media="(max-width: 768px)">
                             <img src="./img/card-3.png" alt="Сортировщик зубков чеснока">
                         </picture>
                     </li>
@@ -124,6 +133,7 @@
                 <ul class="card__list">
                     <li class="card__img">
                         <picture>
+                            <source srcset="./img/cardSmall.png" media="(max-width: 768px)">
                             <img src="./img/card-4.png" alt="Калибровщик головок чеснока">
                         </picture>
                     </li>
@@ -193,6 +203,7 @@
         </div>
 
         <a class="products__button button" href="#">В каталог</a>
+        <a class="products__button--mobile button" href="#">Смотреть все</a>
 
     </section>
 
