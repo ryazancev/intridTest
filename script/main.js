@@ -2,12 +2,15 @@
 
 //Получаем элементы со страницы
 const burgerButton = document.getElementById('burger');
+const iconBurger = document.querySelector('.page-header__button--burger');
+const iconCross = document.querySelector('.page-header__button--cross');
 const navSite = document.querySelector('.nav-site');
-const cards = document.querySelectorAll('.card');
+const cards = document.querySelectorAll('.card__item');
 
 //Функция открытия закрытия меню
 const handleClickMenu = () => {
-    burgerButton.classList.toggle('page-header__button--active');
+    iconBurger.classList.toggle('deactive');
+    iconCross.classList.toggle('deactive');
     navSite.classList.toggle('menu-close');
 };
 
@@ -31,15 +34,14 @@ navSite.addEventListener('click', evt => {
 cards.forEach(item => {
     item.addEventListener('mouseenter', evt => {
         const target = evt.target;
-
-        target.children[1].classList.add('card--active')
+        target.children[4].classList.add('card__button--active');
 
     });
 
     item.addEventListener('mouseleave', evt => {
         const target = evt.target;
 
-        target.children[1].classList.remove('card--active')
+        target.children[4].classList.remove('card__button--active');
 
     });
 });
