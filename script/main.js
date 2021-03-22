@@ -1,47 +1,68 @@
 'use strict';
 
 //Получаем элементы со страницы
-const burgerButton = document.getElementById('burger');
+const pageHeader = document.querySelector('.page-header__top');
 const iconBurger = document.querySelector('.page-header__button--burger');
 const iconCross = document.querySelector('.page-header__button--cross');
 const navSite = document.querySelector('.nav-site');
 const cards = document.querySelectorAll('.card__item');
+const popupMap = document.querySelector('.popup-map');
 
 //Функция открытия закрытия меню
-const handleClickMenu = () => {
-    iconBurger.classList.toggle('deactive');
-    iconCross.classList.toggle('deactive');
-    navSite.classList.toggle('menu-close');
-};
+// const handleClickMenu = () => {
+//     iconBurger.classList.toggle('deactive');
+//     iconCross.classList.toggle('deactive');
+//     navSite.classList.toggle('menu-close');
+// };
+//
+// //Клик
+// burgerButton.addEventListener('click', handleClickMenu);
 
-//Клик
-burgerButton.addEventListener('click', handleClickMenu);
+// Открываем меню по клику на бургер и открываем карту по клику на адрес
+pageHeader.addEventListener('click', evt => {
+    const target = evt.target;
+
+    if (target.closest('#burger')) {
+        iconBurger.classList.toggle('deactive');
+        iconCross.classList.toggle('deactive');
+        navSite.classList.toggle('menu-close');
+    }
+
+    if (target.matches('.page-header__item--map')) {
+        evt.preventDefault();
+        popupMap.classList.add('popup-map--active');
+    }
+})
+
+//Закрываем карту кликом на оверлей
+
+popupMap.addEventListener('click', evt => {
+    const target = evt.target;
+
+    if (!target.matches('.popup-map__item')) popupMap.classList.remove('popup-map--active');
+})
 
 //Закрытие меню по клику на пункты и оверлей
 navSite.addEventListener('click', evt => {
     const target = evt.target;
 
-    if (target.matches('.nav-site__link')) {
-        navSite.classList.add('menu-close');
-    }
+    if (target.matches('.nav-site__link')) navSite.classList.add('menu-close');
 
-    if (!target.closest('.nav-site__list')) {
-        navSite.classList.add('menu-close');
-    }
+    if (!target.closest('.nav-site__list')) navSite.classList.add('menu-close');
 });
 
 //Ховер на карточки товаров
 cards.forEach(item => {
     item.addEventListener('mouseenter', evt => {
         const target = evt.target;
-        target.children[4].classList.add('card__button--active');
+        // target.children[4].classList.add('card__button--active');
 
     });
 
     item.addEventListener('mouseleave', evt => {
         const target = evt.target;
 
-        target.children[4].classList.remove('card__button--active');
+        // target.children[4].classList.remove('card__button--active');
 
     });
 });
