@@ -132,13 +132,14 @@ h1, h2, h3, h4, h5, h6, p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     color: #ffffff;
+}
+
+.tel {
+    margin-right: 354px;
 }
 
 .page-header__logo-text {
@@ -153,6 +154,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .page-header__item--map {
     text-align: right;
+    margin-left: auto;
 }
 
 .page-header__link--phone {
@@ -418,6 +420,10 @@ h1, h2, h3, h4, h5, h6, p {
         width: 111px;
     }
 
+    .tel {
+        margin-right: 260px;
+    }
+
     .page-header__list,
     .nav-site__list,
     .products__wrapper {
@@ -497,6 +503,17 @@ h1, h2, h3, h4, h5, h6, p {
     .deactive {
         display: none;
     }
+
+    .tel {
+        margin-right: 0;
+    }
+
+    .page-header__list {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
 
     .page-header__link--tel {
         display: none;
