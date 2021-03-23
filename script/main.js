@@ -46,23 +46,31 @@ popupMap.addEventListener('click', evt => {
 navSite.addEventListener('click', evt => {
     const target = evt.target;
 
-    if (target.matches('.nav-site__link')) navSite.classList.add('menu-close');
+    if (target.matches('.nav-site__link')) {
+        navSite.classList.add('menu-close')
+        iconBurger.classList.toggle('deactive');
+        iconCross.classList.toggle('deactive');
+    };
 
-    if (!target.closest('.nav-site__list')) navSite.classList.add('menu-close');
+    if (!target.closest('.nav-site__list')) {
+        navSite.classList.add('menu-close')
+        iconBurger.classList.toggle('deactive');
+        iconCross.classList.toggle('deactive');
+    };
 });
 
 //Ховер на карточки товаров
 cards.forEach(item => {
     item.addEventListener('mouseenter', evt => {
         const target = evt.target;
-        // target.children[4].classList.add('card__button--active');
+        target.children[4].classList.add('card__button--active');
 
     });
 
     item.addEventListener('mouseleave', evt => {
         const target = evt.target;
 
-        // target.children[4].classList.remove('card__button--active');
+        target.children[4].classList.remove('card__button--active');
 
     });
 });

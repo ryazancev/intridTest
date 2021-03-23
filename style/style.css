@@ -383,6 +383,7 @@ header {
     line-height: 13px;
     font-weight: normal;
     color: #DA1713;
+    border: none;
     background: url("../img/button.svg") no-repeat;
     text-shadow: 0 9px 35px rgba(255, 0, 31, 0.5);
     -webkit-box-shadow: none;
@@ -398,6 +399,15 @@ header {
 .products__button {
     margin: 0 auto;
     color: #ffffff;
+}
+
+.card__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
 }
 
 .products__button--mobile {
@@ -528,6 +538,10 @@ header {
         z-index: 2;
     }
 
+    main {
+        overflow: hidden;
+    }
+
     .page-header__item--map {
         display: none;
     }
@@ -603,6 +617,13 @@ header {
         line-height: 17px;
     }
 
+    .nav-site__item:focus,
+    .nav-site__item:hover {
+        color: inherit;
+        background-color: transparent;
+        padding: 0;
+    }
+
     .nav-site__item:last-of-type {
         margin-bottom: 0;
     }
@@ -668,15 +689,6 @@ header {
 
     .card__button {
         display: none;
-    }
-
-    .card__link {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
     }
 
     .products__button--mobile {
@@ -764,8 +776,9 @@ header {
     }
 
     .section-main__overlay {
-        padding: 64px 53px;
+        padding: 64px 50px;
     }
+
     .products__wrapper {
         width: 344px;
         margin-bottom: 32px;
@@ -784,10 +797,6 @@ header {
 @media (max-width: 320px) {
     .page-header__list {
         width: 300px;
-    }
-
-    .section-main__overlay {
-        padding: 64px 16px;
     }
 
     .section-main__title {
