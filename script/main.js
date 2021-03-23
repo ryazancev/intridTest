@@ -60,17 +60,17 @@ navSite.addEventListener('click', evt => {
 });
 
 //Ховер на карточки товаров
-cards.forEach(item => {
-    item.addEventListener('mouseenter', evt => {
-        const target = evt.target;
-        target.children[4].classList.add('card__button--active');
-
-    });
-
-    item.addEventListener('mouseleave', evt => {
-        const target = evt.target;
-
-        target.children[4].classList.remove('card__button--active');
-
-    });
-});
+// cards.forEach(item => {
+//     item.addEventListener('mouseenter', evt => {
+//         const target = evt.target;
+//         target.children[4].classList.add('card__button--active');
+//
+//     });
+//
+//     item.addEventListener('mouseleave', evt => {
+//         const target = evt.target;
+//
+//         target.children[4].classList.remove('card__button--active');
+//
+//     });
+// });

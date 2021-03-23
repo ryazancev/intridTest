@@ -102,56 +102,39 @@ h1, h2, h3, h4, h5, h6, p {
     transform: translate(0, -6px);
 }
 
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1170px;
+    height: 100%;
+    margin: 0 auto;
+}
+
 /* Page-header */
 
 header {
+    height: 76px;
     font-size: 14px;
     line-height: 13px;
-}
-
-.page-header__top {
-    position: relative;
-    padding: 7px 0;
-    background: linear-gradient(90.07deg, #FF0500 3.25%, #E20400 100%);
-    height: 76px;
-}
-
-.page-header__top::after {
-    position: absolute;
-    top: 7px;
-    content: "";
-    width: 100%;
-    height: 100%;
-    max-height: 62px;
+    background-color: #E20400;
     background-image: url("../img/print.svg");
     background-repeat: no-repeat;
     background-position: center center;
 }
 
-.page-header__list {
-    position: relative;
-    width: 1169px;
-    margin: 0 auto;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    color: #ffffff;
-    z-index: 2;
-}
-
-.page-header__link--tel {
-    margin-right: 354px;
-}
-
-.page-header__item {
+.header__item {
     font-weight: bold;
+    color: #ffffff;
 }
 
-.page-header__logo-text {
+header a:focus,
+header a:hover {
+    opacity: 0.7;
+}
+
+.header__item--logo {
     width: 129px;
     font-size: 11px;
     line-height: 11px;
@@ -161,81 +144,66 @@ header {
     text-transform: uppercase;
 }
 
-.page-header__item--map {
-    margin-left: auto;
-}
-
-.page-header__link--phone {
+.header__button,
+.header__item--phone {
     display: none;
 }
 
-.page-header__item--button {
-    display: none;
+/* Nav */
+
+nav .container {
+    max-width: 1216px;
 }
 
-.nav-site {
+nav {
     height: 49px;
 }
 
-.nav-site__list {
-    width: 1169px;
-    margin: 0 auto;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-.nav-site__icon {
+.nav__icon {
     margin-right: 3px;
     vertical-align: text-bottom;
 }
 
-.nav-site__link {
+.nav__link {
+    height: 100%;
+    padding: 17px 23px 17px;
     line-height: 13px;
     vertical-align: text-bottom;
 }
 
-.page-header__top a:focus,
-.page-header__top a:hover {
-    opacity: 0.7;
-}
-
-.nav-site__item {
-    height: 100%;
-    padding: 17px 0 17px;
-}
-
-.nav-site__item:focus,
-.nav-site__item:hover {
+.nav__link:focus,
+.nav__link:hover {
     color: #ffffff;
-    background-color: #6b6b6b;
-
+    background: linear-gradient(90.07deg, #FF0500 3.25%, #E20400 100%);
 }
 
 /* Section-main */
 
 .section-main {
+    position: relative;
+    width: 100%;
+    height: 535px;
+    margin-bottom: 112px;
+    color: #ffffff;
     background-image: url("../img/bgDesk.jpg");
     background-size: auto;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 535px;
 }
 
-.section-main__overlay {
+.section-main:after {
+    position: absolute;
+    top: 0;
+    content: "";
     width: 100%;
-    height: 100%;
-    padding-top: 132px;
-    padding-left: 374px;
+    height: 535px;
     background: linear-gradient(122.52deg, rgba(99, 61, 38, 0.14) -1.29%, rgba(99, 61, 38, 0.6) 97.1%);
-    color: #ffffff;
+}
+
+.section-main .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: normal;
+    z-index: 1;
 }
 
 .section-main__title {
@@ -255,12 +223,11 @@ header {
 
 /* Products */
 
-.products {
-    padding: 112px 0;
+.cards {
     text-align: center;
 }
 
-.products__title {
+h1 {
     width: 770px;
     margin: 0 auto 61px;
     font-family: Ponter, sans-serif;
@@ -269,22 +236,12 @@ header {
     text-align: center;
 }
 
-.products__wrapper {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -ms-flex-wrap: wrap;
+.cards .container {
     flex-wrap: wrap;
-    width: 1170px;
-    height: 772px;
-    margin: 0 auto 36px;
+    margin-bottom: 44px;
 }
 
-
-.products__wrapper::before {
+.cards .container::before {
     position: absolute;
     left: -162px;
     bottom: -43px;
@@ -294,7 +251,7 @@ header {
     background: url("../img/garlicBottom.png");
 }
 
-.products__wrapper::after {
+.cards .container::after {
     position: absolute;
     top: -70px;
     right: -70px;
@@ -312,28 +269,18 @@ header {
     width: 270px;
     margin-right: 30px;
     margin-bottom: 30px;
-    -webkit-filter: drop-shadow(0px 2px 30px rgba(114, 114, 114, 0.1));
-    filter: drop-shadow(0px 2px 20px rgba(114, 114, 114, 0.1));
+    padding: 19px 16px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 30px rgba(114, 114, 114, 0.1);
     -webkit-transition: all .25s cubic-bezier(.02, .01, .47, 1);
     transition: all .25s cubic-bezier(.02, .01, .47, 1);
 }
 
-.card__item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 19px 16px;
-    background: #ffffff;
-    -webkit-clip-path: polygon(11% 0, 100% 0, 100% 85%, 82% 100%, 0 100%, 0 9%);
-    clip-path: polygon(11% 0, 100% 0, 100% 85%, 82% 100%, 0 100%, 0 9%);
-}
-
-.card__item:focus,
-.card__item:hover {
-    -webkit-clip-path: polygon(11% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 9%);
-    clip-path: polygon(11% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 9%);
-}
+/*.card__item:focus,*/
+/*.card__item:hover {*/
+/*    -webkit-clip-path: polygon(11% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 9%);*/
+/*    clip-path: polygon(11% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 9%);*/
+/*}*/
 
 .card:focus,
 .card:hover {
@@ -401,21 +348,12 @@ header {
     display: block;
 }
 
-.products__button {
+.cards__button {
     margin: 0 auto;
     color: #ffffff;
 }
 
-.card__link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-}
-
-.products__button--mobile {
+.cards__button--mobile {
     display: none;
 }
 
