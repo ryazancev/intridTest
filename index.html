@@ -110,7 +110,7 @@
             <div class="card__wrapper">
                 <a href="#" class="card">
                     <picture>
-                        <source srcset="./img/cardSmall.jpg" media="(max-width: 768px)">
+                        <source srcset="./img/cardSmall.jpg" media="(max-width: 1024px)">
                         <img src="./img/card-1.jpg" alt="Машинка очистки чеснока">
                     </picture>
                     <p class="card__descr">Машинка очистки чеснока</p>
@@ -127,7 +127,7 @@
             <div class="card__wrapper">
                 <a href="#" class="products__card card">
                     <picture>
-                        <source srcset="./img/cardSmall.jpg" media="(max-width: 768px)">
+                        <source srcset="./img/cardSmall.jpg" media="(max-width: 1024px)">
                         <img src="./img/card-2.jpg" alt="Машинка очистки чеснока">
                     </picture>
                     <p class="card__descr">Машинка очистки чеснока</p>
@@ -144,7 +144,7 @@
             <div class="card__wrapper">
                 <a href="#" class="products__card card">
                     <picture>
-                        <source srcset="./img/cardSmall.jpg" media="(max-width: 768px)">
+                        <source srcset="./img/cardSmall.jpg" media="(max-width: 1024px)">
                         <img src="./img/card-3.jpg" alt="Сортровщик зубков чеснока">
                     </picture>
                     <p class="card__descr">Машинка очистки чеснока</p>
@@ -161,7 +161,7 @@
             <div class="card__wrapper">
                 <a href="#" class="products__card card">
                     <picture>
-                        <source srcset="./img/cardSmall.jpg" media="(max-width: 768px)">
+                        <source srcset="./img/cardSmall.jpg" media="(max-width: 1024px)">
                         <img src="./img/card-4.jpg" alt="Калибровщик головок чеснова">
                     </picture>
                     <p class="card__descr">Машинка очистки чеснока</p>
@@ -178,7 +178,7 @@
             <div class="card__wrapper">
                 <a href="#" class="products__card card">
                     <picture>
-                        <source srcset="./img/cardSmall.jpg" media="(max-width: 768px)">
+                        <source srcset="./img/cardSmall.jpg" media="(max-width: 1024px)">
                         <img src="./img/card-1.jpg" alt="Машинка очистки чеснока">
                     </picture>
                     <p class="card__descr">Машинка очистки чеснока</p>
@@ -195,7 +195,7 @@
             <div class="card__wrapper">
                 <a href="#" class="products__card card">
                     <picture>
-                        <source srcset="./img/cardSmall.jpg" media="(max-width: 768px)">
+                        <source srcset="./img/cardSmall.jpg" media="(max-width: 1024px)">
                         <img src="./img/card-2.jpg" alt="Машинка очистки чеснока">
                     </picture>
                     <p class="card__descr">Машинка очистки чеснока</p>
@@ -212,7 +212,7 @@
             <div class="card__wrapper">
                 <a href="#" class="products__card card">
                     <picture>
-                        <source srcset="./img/cardSmall.jpg" media="(max-width: 768px)">
+                        <source srcset="./img/cardSmall.jpg" media="(max-width: 1024px)">
                         <img src="./img/card-3.jpg" alt="Сортровщик зубков чеснока">
                     </picture>
                     <p class="card__descr">Машинка очистки чеснока</p>
@@ -229,7 +229,7 @@
             <div class="card__wrapper">
                 <a href="#" class="products__card card">
                     <picture>
-                        <source srcset="./img/cardSmall.jpg" media="(max-width: 768px)">
+                        <source srcset="./img/cardSmall.jpg" media="(max-width: 1024px)">
                         <img src="./img/card-4.jpg" alt="Калибровщик головок чеснова">
                     </picture>
                     <p class="card__descr">Машинка очистки чеснока</p>
@@ -365,6 +365,9 @@
                         отвечаю лично»</p>
                     <cite class="reviews__cite">—Евгений Медведев.</cite>
                 </blockquote>
+                <div class="reviews__image">
+                    <img src="./img/reviews-image.jpg" alt="">
+                </div>
                 <p class="reviews__text">Мы производим технику для возделывания чеснока: сажалки для чеснока, лука-севка, тюльпанов,
                     гладиулосов, калибровочные машини для калибровки зубков и головок чеснока, линии по дроблению и
                     калибровке чеснока, комбайны для уборки чеснока.
@@ -374,9 +377,10 @@
                 <p class="reviews__text">Широкая линейка техники для чеснока позволит подстроиться под ваши запросы.</p>
                 <a class="reviews__button button" href="#">В каталог</a>
             </div>
-            <p>
+            <div class="reviews__image">
                 <img src="./img/reviews-image.jpg" alt="">
-            </p>
+            </div>
+
         </div>
 
     </section>
@@ -440,7 +444,7 @@
     <section class="carousel">
         <h2>Нам доверяют</h2>
         <div class="container">
-            <button class="prev"></button>
+            <button class="carousel__button prev">&larr;</button>
 
             <p class="carousel__item">
                 <img class="carousel__img" src="./img/agroterra.jpg" alt="Логотип компании: Агротерра">
@@ -462,10 +466,49 @@
                 <img class="carousel__img" src="./img/redwest.jpg" alt="Красный Восток">
             </p>
 
-            <button class="next"></button>
+            <button class="carousel__button next">&rarr;</button>
         </div>
     </section>
 </main>
+
+<footer>
+
+    <div class="container">
+
+        <a class="footer__link footer__link--logo" href="#">
+            <img class="footer__logo" src="./img/footer-logo.svg" alt="Логотип компании: Медвед">
+            Техника для чеснока
+        </a>
+
+        <ul>
+            <li>
+                <a class="footer__link" href="#">Каталог</a>
+            </li>
+            <li>
+                <a class="footer__link" href="#">Прайс-лист</a>
+            </li>
+            <li>
+                <a class="footer__link" href="#">О компании</a>
+            </li>
+            <li>
+                <a class="footer__link" href="#">Оплата и доставка</a>
+            </li>
+            <li>
+                <a class="footer__link" href="#">Вопросы и ответы</a>
+            </li>
+            <li>
+                <a class="footer__link" href="#">Контакты</a>
+            </li>
+        </ul>
+
+        <div class="footer__address">
+            <a class="footer__link" href="tel:+7(919)2493994">+ 7 (919) 249 39 94</a>
+            <a class="footer__link" href="#">Воронеж <br> пр-т Патриотов, 11/3</a>
+        </div>
+
+    </div>
+
+</footer>
 
 <div class="popup-map">
     <div class="popup-map__item" style="position:relative;overflow:hidden;"><a

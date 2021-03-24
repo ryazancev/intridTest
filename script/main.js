@@ -7,15 +7,6 @@ const iconCross = document.querySelector('.page-header__button--cross');
 const navSite = document.querySelector('nav');
 const popupMap = document.querySelector('.popup-map');
 
-//Функция открытия закрытия меню
-// const handleClickMenu = () => {
-//     iconBurger.classList.toggle('deactive');
-//     iconCross.classList.toggle('deactive');
-//     navSite.classList.toggle('menu-close');
-// };
-//
-// //Клик
-// burgerButton.addEventListener('click', handleClickMenu);
 
 // Открываем меню по клику на бургер и открываем карту по клику на адрес
 pageHeader.addEventListener('click', evt => {
@@ -27,7 +18,7 @@ pageHeader.addEventListener('click', evt => {
         navSite.classList.toggle('menu-close');
     }
 
-    if (target.matches('.page-header__item--map')) {
+    if (target.matches('#map')) {
         evt.preventDefault();
         popupMap.classList.add('popup-map--active');
     }
@@ -60,50 +51,50 @@ navSite.addEventListener('click', evt => {
 
 //Видео
 
-function findVideos() {
-    var videos = document.querySelectorAll('.video');
-
-    for (var i = 0; i < videos.length; i++) {
-        setupVideo(videos[i]);
-    }
-}
-
-function setupVideo(video) {
-    var link = video.querySelector('.video__link');
-    var media = video.querySelector('.video__media');
-    var button = video.querySelector('.video__button');
-    var id = parseMediaURL(media);
-    video.addEventListener('click', function () {
-        var iframe = createIframe(id);
-        link.remove();
-        button.remove();
-        video.appendChild(iframe);
-    });
-    link.removeAttribute('href');
-    video.classList.add('video--enabled');
-}
-
-function parseMediaURL(media) {
-    var regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
-    var url = media.src;
-    var match = url.match(regexp);
-    return match[1];
-}
-
-function createIframe(id) {
-    var iframe = document.createElement('iframe');
-    iframe.setAttribute('allowfullscreen', '');
-    iframe.setAttribute('allow', 'autoplay');
-    iframe.setAttribute('src', generateURL(id));
-    iframe.classList.add('video__media');
-    return iframe;
-}
-
-function generateURL(id) {
-    var query = '?rel=0&showinfo=0&autoplay=1';
-    return 'https://www.youtube.com/embed/' + id + query;
-}
-
-findVideos();
+// function findVideos() {
+//     var videos = document.querySelectorAll('.video');
+//
+//     for (var i = 0; i < videos.length; i++) {
+//         setupVideo(videos[i]);
+//     }
+// }
+//
+// function setupVideo(video) {
+//     var link = video.querySelector('.video__link');
+//     var media = video.querySelector('.video__media');
+//     var button = video.querySelector('.video__button');
+//     var id = parseMediaURL(media);
+//     video.addEventListener('click', function () {
+//         var iframe = createIframe(id);
+//         link.remove();
+//         button.remove();
+//         video.appendChild(iframe);
+//     });
+//     link.removeAttribute('href');
+//     video.classList.add('video--enabled');
+// }
+//
+// function parseMediaURL(media) {
+//     var regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
+//     var url = media.src;
+//     var match = url.match(regexp);
+//     return match[1];
+// }
+//
+// function createIframe(id) {
+//     var iframe = document.createElement('iframe');
+//     iframe.setAttribute('allowfullscreen', '');
+//     iframe.setAttribute('allow', 'autoplay');
+//     iframe.setAttribute('src', generateURL(id));
+//     iframe.classList.add('video__media');
+//     return iframe;
+// }
+//
+// function generateURL(id) {
+//     var query = '?rel=0&showinfo=0&autoplay=1';
+//     return 'https://www.youtube.com/embed/' + id + query;
+// }
+//
+// findVideos();
 
 
