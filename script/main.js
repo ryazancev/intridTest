@@ -1,11 +1,10 @@
 'use strict';
 
 //Получаем элементы со страницы
-const pageHeader = document.querySelector('.page-header__top');
+const pageHeader = document.querySelector('header');
 const iconBurger = document.querySelector('.page-header__button--burger');
 const iconCross = document.querySelector('.page-header__button--cross');
-const navSite = document.querySelector('.nav-site');
-const cards = document.querySelectorAll('.card__item');
+const navSite = document.querySelector('nav');
 const popupMap = document.querySelector('.popup-map');
 
 //Функция открытия закрытия меню
@@ -59,18 +58,4 @@ navSite.addEventListener('click', evt => {
     };
 });
 
-//Ховер на карточки товаров
-// cards.forEach(item => {
-//     item.addEventListener('mouseenter', evt => {
-//         const target = evt.target;
-//         target.children[4].classList.add('card__button--active');
-//
-//     });
-//
-//     item.addEventListener('mouseleave', evt => {
-//         const target = evt.target;
-//
-//         target.children[4].classList.remove('card__button--active');
-//
-//     });
-// });
+
