@@ -41,7 +41,7 @@
     </div>
 </header>
 
-<nav class="deactive">
+<nav class="menu-close">
     <div class="container">
         <a class="nav__link" href="#">
             <svg class="nav__icon" width="16" height="16">
@@ -264,7 +264,7 @@
             <a class="compare__link compare__link--p" href="#">Картофель</a>
             <a class="compare__link compare__link--o" href="#">Лук</a>
 
-            <ul>
+            <ul class="compare__list compare__list--head">
                 <li>Стоимость семян на 1 Га:</li>
                 <li>Затраты на удобрения:</li>
                 <li>Средний урожай с 1 Га:</li>
@@ -273,7 +273,7 @@
                 <li>Прибыль:</li>
             </ul>
 
-            <ul>
+            <ul class="compare__list compare__list--potato" id="potato">
                 <li>81 000 ₽</li>
                 <li>24 000 ₽</li>
                 <li>20 000 Кг</li>
@@ -282,7 +282,7 @@
                 <li>295 000 ₽</li>
             </ul>
 
-            <ul>
+            <ul class="compare__list compare__list--garlic" id="garlic">
                 <li>250 000 ₽</li>
                 <li>21 000 ₽</li>
                 <li>7 000 Кг</li>
@@ -291,7 +291,7 @@
                 <li>919 000 ₽</li>
             </ul>
 
-            <ul>
+            <ul class="compare__list compare__list--onion" id="onion">
                 <li>45 000 ₽</li>
                 <li>24 000 ₽</li>
                 <li>25 000 Кг</li>
@@ -360,7 +360,7 @@
 
     </section>
 
-    <section class="reviews">
+    <section class="reviews clearfix">
 
         <div class="container">
 
@@ -369,6 +369,13 @@
                     отвечаю лично»</p>
                 <cite class="reviews__cite">—Евгений Медведев.</cite>
             </blockquote>
+
+            <div class="reviews__image">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="./img/reviews-imageSm.jpg">
+                    <img src="./img/reviews-image.jpg" alt="Фотография ростов чеснока">
+                </picture>
+            </div>
 
             <p class="reviews__text">Мы производим технику для возделывания чеснока: сажалки для чеснока, лука-севка,
                 тюльпанов,
@@ -380,10 +387,6 @@
                 несколько раз ниже.</p>
             <p class="reviews__text">Широкая линейка техники для чеснока позволит подстроиться под ваши запросы.</p>
             <a class="reviews__button button" href="#">В каталог</a>
-
-            <div class="reviews__image">
-                <img src="./img/reviews-image.jpg" alt="">
-            </div>
 
         </div>
 
@@ -483,7 +486,20 @@
     <div class="container">
 
         <a class="footer__link footer__link--logo" href="#">
-            <img class="footer__logo" src="./img/footer-logo.svg" alt="Логотип компании: Медвед">
+            <svg width="129" height="27" viewBox="0 0 129 27" fill="#6B6B6B" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 27H5.05291L6.99999 15.8261L8.99999 27H13L15 15.8261L17.0001 27L25 27L20 0.0217567H13L11.0001 11.8247L8.99999 0.0217567H2L0 27Z"
+                      />
+                <path d="M27.2693 5.28988V27H44.2616V21.1257H36.322V15.8261H44.2616V10.8161H36.322V5.28988H44.2616V0.0217567H35.6204L27.2693 5.28988Z"
+                      />
+                <path d="M46.1554 5.28988V27H60.198L67.2193 21.7319V7.78927C67.2193 6.21583 66.4787 4.73417 65.2201 3.78986L61.5316 1.02234C60.666 0.372863 59.613 0.0217567 58.5308 0.0217567H53.1767L46.1554 5.28988ZM55.0493 21.1257V5.28988L58.1243 7.85415V21.1257H55.0493Z"
+                      />
+                <path d="M77.2559 21.1257V0L69.2315 0.0217567V21.9089L77.2559 27H79.262L87.2863 21.9089V0.0217567L79.262 0V21.1257H77.2559Z"
+                      />
+                <path d="M89.0499 5.28988V27H106.042V21.1257H98.1027V15.8261H106.042V10.8161H98.1027V5.28988H106.042V0.0217567H97.4011L89.0499 5.28988Z"
+                     />
+                <path d="M107.936 5.28988V27H121.979L129 21.7319V7.78927C129 6.21583 128.259 4.73416 127.001 3.78985L123.312 1.02234C122.447 0.372862 121.394 0.0217567 120.311 0.0217567H114.957L107.936 5.28988ZM116.83 21.1257V5.28988L119.905 7.85415V21.1257H116.83Z"
+                      />
+            </svg>
             Техника для чеснока
         </a>
 
@@ -515,6 +531,11 @@
 
     </div>
 
+    <div class="container">
+        <p>© ИП Медведев Е.Е</p>
+        <a class="intrid" href="https://intrid.ru/">made in INTRID</a>
+    </div>
+
 </footer>
 
 <div class="popup-map">
@@ -528,6 +549,7 @@
                 style="position:relative;"></iframe>
     </div>
 </div>
+
 
 <script src="./script/main.js"></script>
 </body>

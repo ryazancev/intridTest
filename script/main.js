@@ -2,6 +2,7 @@
 
 //Получаем элементы со страницы
 const pageHeader = document.querySelector('header');
+const overlay = document.querySelector('.nav-overlay');
 const iconBurger = document.querySelector('.header__button--burger');
 const iconCross = document.querySelector('.header__button--cross');
 const navSite = document.querySelector('nav');
@@ -12,10 +13,11 @@ const popupMap = document.querySelector('.popup-map');
 pageHeader.addEventListener('click', evt => {
     const target = evt.target;
 
-    if (target.matches('.header__button--burger')) {
+    if (target.closest('.header__button')) {
         iconBurger.classList.toggle('deactive');
         iconCross.classList.toggle('deactive');
-        navSite.classList.toggle('active');
+        navSite.classList.toggle('menu-close');
+        overlay.classList.toggle('menu-close');
     }
 
     if (target.matches('#map')) {
@@ -95,6 +97,4 @@ navSite.addEventListener('click', evt => {
 //     return 'https://www.youtube.com/embed/' + id + query;
 // }
 //
-// findVideos();
-
-
+// findVideos()
