@@ -2,11 +2,12 @@
 
 //Получаем элементы со страницы
 const pageHeader = document.querySelector('header');
-const overlay = document.querySelector('.nav-overlay');
+const overlay = document.querySelector('.nav--overlay');
 const iconBurger = document.querySelector('.header__button--burger');
 const iconCross = document.querySelector('.header__button--cross');
 const navSite = document.querySelector('nav');
 const popupMap = document.querySelector('.popup-map');
+const tabsSection = document.querySelector('.compare');
 
 
 // Открываем меню по клику на бургер и открываем карту по клику на адрес
@@ -28,73 +29,124 @@ pageHeader.addEventListener('click', evt => {
 
 //Закрываем карту кликом на оверлей
 
-popupMap.addEventListener('click', evt => {
-    const target = evt.target;
-
-    if (!target.matches('.popup-map__item')) popupMap.classList.remove('popup-map--active');
+popupMap.addEventListener('click', () => {
+    popupMap.classList.remove('popup-map--active');
 })
 
-//Закрытие меню по клику на пункты и оверлей
+//Закрытие меню по клику на пункты
 navSite.addEventListener('click', evt => {
     const target = evt.target;
 
-    if (target.matches('.nav-site__link')) {
+    if (target.matches('.nav__link')) {
         navSite.classList.add('menu-close')
         iconBurger.classList.toggle('deactive');
         iconCross.classList.toggle('deactive');
-    };
-
-    if (!target.closest('.nav-site__list')) {
+    } else {
         navSite.classList.add('menu-close')
         iconBurger.classList.toggle('deactive');
         iconCross.classList.toggle('deactive');
-    };
+    }
 });
+
+//Табы
+
+tabsSection.addEventListener('click', evt => {
+    evt.preventDefault();
+    const target = evt.target;
+
+    const garlic = document.getElementById('garlic');
+    const potato = document.getElementById('potato');
+    const onion = document.getElementById('onion');
+    const garlicTab = document.querySelector('.compare__link--g');
+    const potatoTab = document.querySelector('.compare__link--p');
+    const onionTab = document.querySelector('.compare__link--o');
+
+
+    if (target === garlicTab) {
+        garlic.style.display = 'block';
+        garlicTab.classList.add('compare__link--active');
+
+        potato.style.display = 'none';
+        potatoTab.classList.remove('compare__link--active');
+
+        onion.style.display = 'none';
+        onionTab.classList.remove('compare__link--active');
+    }
+
+    if (target === potatoTab) {
+        potato.style.display = 'block';
+        potatoTab.classList.add('compare__link--active');
+
+        garlic.style.display = 'none';
+        garlicTab.classList.remove('compare__link--active');
+
+        onion.style.display = 'none';
+        onionTab.classList.remove('compare__link--active');
+    }
+
+    if (target === onionTab) {
+        onion.style.display = 'block';
+        onionTab.classList.add('compare__link--active');
+
+        garlic.style.display = 'none';
+        garlicTab.classList.remove('compare__link--active');
+
+        potato.style.display = 'none';
+        potatoTab.classList.remove('compare__link--active');
+    }
+
+
+})
+
 
 //Видео
 
-// function findVideos() {
-//     var videos = document.querySelectorAll('.video');
-//
-//     for (var i = 0; i < videos.length; i++) {
-//         setupVideo(videos[i]);
-//     }
-// }
-//
-// function setupVideo(video) {
-//     var link = video.querySelector('.video__link');
-//     var media = video.querySelector('.video__media');
-//     var button = video.querySelector('.video__button');
-//     var id = parseMediaURL(media);
-//     video.addEventListener('click', function () {
-//         var iframe = createIframe(id);
-//         link.remove();
-//         button.remove();
-//         video.appendChild(iframe);
-//     });
-//     link.removeAttribute('href');
-//     video.classList.add('video--enabled');
-// }
-//
-// function parseMediaURL(media) {
-//     var regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
-//     var url = media.src;
-//     var match = url.match(regexp);
-//     return match[1];
-// }
-//
-// function createIframe(id) {
-//     var iframe = document.createElement('iframe');
-//     iframe.setAttribute('allowfullscreen', '');
-//     iframe.setAttribute('allow', 'autoplay');
-//     iframe.setAttribute('src', generateURL(id));
-//     iframe.classList.add('video__media');
-//     return iframe;
-// }
-//
-// function generateURL(id) {
-//     var query = '?rel=0&showinfo=0&autoplay=1';
-//     return 'https://www.youtube.com/embed/' + id + query;
-// }
-//
-// findVideos()
+function findVideos() {
+    const videos = document.querySelectorAll('.video');
+
+    for (let i = 0; i < videos.length; i++) {
+        setupVideo(videos[i]);
+    }
+}
+
+function setupVideo(video) {
+    const link = video.querySelector('.video__link');
+    const media = video.querySelector('.video__media');
+    const button = video.querySelector('.video__button');
+    const id = parseMediaURL(media);
+    video.addEventListener('click', function () {
+        const iframe = createIframe(id);
+        link.remove();
+        button.remove();
+        video.appendChild(iframe);
+    });
+    link.removeAttribute('href');
+    video.classList.add('video--enabled');
+}
+
+function parseMediaURL(media) {
+    const regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault\.jpg/i;
+    const url = media.src;
+    const match = url.match(regexp);
+    return match[1];
+}
+
+function createIframe(id) {
+    const iframe = document.createElement('iframe');
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.setAttribute('allow', 'autoplay');
+    iframe.setAttribute('src', generateURL(id));
+    iframe.classList.add('video__media');
+    return iframe;
+}
+
+function generateURL(id) {
+    const query = '?rel=0&showinfo=0&autoplay=1';
+    return 'https://www.youtube.com/embed/' + id + query;
+}
+
+findVideos();
+
+//Анимация
+
+new WOW().init();
