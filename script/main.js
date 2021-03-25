@@ -2,8 +2,8 @@
 
 //Получаем элементы со страницы
 const pageHeader = document.querySelector('header');
-const iconBurger = document.querySelector('.page-header__button--burger');
-const iconCross = document.querySelector('.page-header__button--cross');
+const iconBurger = document.querySelector('.header__button--burger');
+const iconCross = document.querySelector('.header__button--cross');
 const navSite = document.querySelector('nav');
 const popupMap = document.querySelector('.popup-map');
 
@@ -12,10 +12,10 @@ const popupMap = document.querySelector('.popup-map');
 pageHeader.addEventListener('click', evt => {
     const target = evt.target;
 
-    if (target.closest('#burger')) {
+    if (target.matches('.header__button--burger')) {
         iconBurger.classList.toggle('deactive');
         iconCross.classList.toggle('deactive');
-        navSite.classList.toggle('menu-close');
+        navSite.classList.toggle('active');
     }
 
     if (target.matches('#map')) {

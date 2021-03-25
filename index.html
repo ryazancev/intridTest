@@ -41,7 +41,7 @@
     </div>
 </header>
 
-<nav>
+<nav class="deactive">
     <div class="container">
         <a class="nav__link" href="#">
             <svg class="nav__icon" width="16" height="16">
@@ -246,7 +246,11 @@
         </div>
 
         <a class="cards__button button" href="#">В каталог</a>
-        <a class="cards__button--mobile button" href="#">Смотреть все</a>
+        <div class="card__button--wrapper cards__button--mobile">
+            <button class="card__button" type="button">
+                Смотреть все
+            </button>
+        </div>
 
     </section>
 
@@ -256,8 +260,8 @@
 
         <div class="container">
 
+            <a class="compare__link compare__link--g compare__link--active" href="#">Чеснок</a>
             <a class="compare__link compare__link--p" href="#">Картофель</a>
-            <a class="compare__link compare__link--g" href="#">Чеснок</a>
             <a class="compare__link compare__link--o" href="#">Лук</a>
 
             <ul>
@@ -359,24 +363,24 @@
     <section class="reviews">
 
         <div class="container">
-            <div class="reviews__wrapper">
-                <blockquote class="reviews__item">
-                    <p class="reviews__title">«За качество
-                        отвечаю лично»</p>
-                    <cite class="reviews__cite">—Евгений Медведев.</cite>
-                </blockquote>
-                <div class="reviews__image">
-                    <img src="./img/reviews-image.jpg" alt="">
-                </div>
-                <p class="reviews__text">Мы производим технику для возделывания чеснока: сажалки для чеснока, лука-севка, тюльпанов,
-                    гладиулосов, калибровочные машини для калибровки зубков и головок чеснока, линии по дроблению и
-                    калибровке чеснока, комбайны для уборки чеснока.
-                </p>
-                <p class="reviews__text">Изделия без посредников, напрямую от производителя. Себестоимость сельськохозяйсвенной продукции в
-                    несколько раз ниже.</p>
-                <p class="reviews__text">Широкая линейка техники для чеснока позволит подстроиться под ваши запросы.</p>
-                <a class="reviews__button button" href="#">В каталог</a>
-            </div>
+
+            <blockquote class="reviews__item">
+                <p class="reviews__title">«За качество
+                    отвечаю лично»</p>
+                <cite class="reviews__cite">—Евгений Медведев.</cite>
+            </blockquote>
+
+            <p class="reviews__text">Мы производим технику для возделывания чеснока: сажалки для чеснока, лука-севка,
+                тюльпанов,
+                гладиулосов, калибровочные машини для калибровки зубков и головок чеснока, линии по дроблению и
+                калибровке чеснока, комбайны для уборки чеснока.
+            </p>
+            <p class="reviews__text">Изделия без посредников, напрямую от производителя. Себестоимость
+                сельськохозяйсвенной продукции в
+                несколько раз ниже.</p>
+            <p class="reviews__text">Широкая линейка техники для чеснока позволит подстроиться под ваши запросы.</p>
+            <a class="reviews__button button" href="#">В каталог</a>
+
             <div class="reviews__image">
                 <img src="./img/reviews-image.jpg" alt="">
             </div>
@@ -397,7 +401,8 @@
                         </svg>
                     </p>
                     <p class="features__text">Полный спектр оборудования</p>
-                    <p class="features__subtitle">Мы единственная компания в России которая делает весь спектр оборудования для возделывания чеснока</p>
+                    <p class="features__subtitle">Мы единственная компания в России которая делает весь спектр
+                        оборудования для возделывания чеснока</p>
                 </div>
             </div>
 
@@ -409,7 +414,8 @@
                         </svg>
                     </p>
                     <p class="features__text">Экономия денег и <br> времени</p>
-                    <p class="features__subtitle">Если Вы цените свое время и деньги, тогда Вам стоит обратиться в нашу компанию.</p>
+                    <p class="features__subtitle">Если Вы цените свое время и деньги, тогда Вам стоит обратиться в нашу
+                        компанию.</p>
                 </div>
             </div>
 
@@ -433,7 +439,8 @@
                         </svg>
                     </p>
                     <p class="features__text">Вся техника прошла испытания и проверена</p>
-                    <p class="features__subtitle">Мы позаботились о том, что бы Вы не переживали о качестве продукции.</p>
+                    <p class="features__subtitle">Мы позаботились о том, что бы Вы не переживали о качестве
+                        продукции.</p>
                 </div>
             </div>
 
