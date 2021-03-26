@@ -149,4 +149,8 @@ findVideos();
 
 //Анимация
 
-new WOW().init();
+const wow = new WOW({
+    'mobile': false
+});
+
+wow.init();
