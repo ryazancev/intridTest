@@ -8,6 +8,7 @@ const iconCross = document.querySelector('.header__button--cross');
 const navSite = document.querySelector('nav');
 const popupMap = document.querySelector('.popup-map');
 const tabsSection = document.querySelector('.compare');
+const scrollBtn = document.querySelector('.scroll');
 
 
 // Открываем меню по клику на бургер и открываем карту по клику на адрес
@@ -61,7 +62,6 @@ tabsSection.addEventListener('click', evt => {
     const potatoTab = document.querySelector('.compare__link--p');
     const onionTab = document.querySelector('.compare__link--o');
 
-
     if (target === garlicTab) {
         garlic.style.display = 'block';
         garlicTab.classList.add('compare__link--active');
@@ -95,8 +95,7 @@ tabsSection.addEventListener('click', evt => {
         potatoTab.classList.remove('compare__link--active');
     }
 
-
-})
+});
 
 
 //Видео
@@ -154,3 +153,31 @@ const wow = new WOW({
 });
 
 wow.init();
+
+//Owl-carousel
+
+$(document).ready(function () {
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 50,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 2,
+                nav: false,
+                dots: true
+            },
+            768: {
+                items: 3,
+                nav: false,
+                dots: true
+            },
+            1024: {
+                items: 5,
+                nav: true,
+                dots: false
+            }
+        }
+    });
+})
+

@@ -1,19 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Тестовое задание</title>
-    <link rel="stylesheet" href="./style/owl.carousel.min.css">
-    <link rel="stylesheet" href="./style/owl.theme.default.min.css">
-    <link rel="stylesheet" href="./style/animate.css">
+    <title>Купить технику для чеснока</title>
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-
 <header>
     <div class="container">
 
@@ -95,19 +91,29 @@
 
 <main>
 
-    <section class="section-main">
+    <ul class="breadcrumb">
+        <li><a href="#">Главная > </a></li>
+        <li class="breadcrumb--active"><a href="#">Каталог техники</a></li>
+    </ul>
+
+    <section class="catalog">
+        <h1>Техника для чеснока</h1>
+        <h2>Купить технику для чеснока от производителя</h2>
 
         <div class="container">
-            <p class="section-main__title">Акция! Распродажа техники по цене 2020 г.!</p>
-            <p class="section-main__subtitle">Действует до 31.03.2021 г.</p>
-            <a class="section-main__button button" href="#">В каталог</a>
+            <a href="#" class="catalog__tab tab-active">
+                Для посадки
+            </a>
+            <a href="#" class="catalog__tab">
+                Для подготовки семян
+            </a>
+            <a href="#" class="catalog__tab">
+                Для сборки урожая
+            </a>
+            <a href="#" class="catalog__tab">
+                Складская техника
+            </a>
         </div>
-
-    </section>
-
-    <section class="cards">
-
-        <h1>Купить технику для чеснока от производителя</h1>
 
         <div class="container">
 
@@ -134,7 +140,7 @@
                         <source srcset="./img/cardSmall.jpg" media="(max-width: 1024px)">
                         <img src="./img/card-2.jpg" alt="Машинка очистки чеснока">
                     </picture>
-                    <p class="card__descr">Линия по дроблению и калибровке чеснока</p>
+                    <p class="card__descr">Машинка очистки чеснока</p>
                     <span class="card__price card__price--new">от 235 000 ₽</span>
                     <span class="card__price card__price--old">от 270 000 ₽</span>
                     <div class="card__button--wrapper">
@@ -249,244 +255,10 @@
 
         </div>
 
-        <a class="cards__button button" href="#">В каталог</a>
-        <div class="card__button--wrapper cards__button--mobile">
-            <button class="card__button" type="button">
-                Смотреть все
-            </button>
         </div>
 
     </section>
 
-    <section class="compare">
-
-        <h2>Почему выгодно выращивать чеснок?</h2>
-
-        <div class="container">
-
-            <a class="compare__link compare__link--g compare__link--active">Чеснок</a>
-            <a class="compare__link compare__link--p">Картофель</a>
-            <a class="compare__link compare__link--o">Лук</a>
-
-            <ul class="compare__list compare__list--head">
-                <li>Стоимость семян на 1 Га:</li>
-                <li>Затраты на удобрения:</li>
-                <li>Средний урожай с 1 Га:</li>
-                <li>Цена продажи:</li>
-                <li>Доход с 1 Га:</li>
-                <li>Прибыль:</li>
-            </ul>
-
-            <ul class="compare__list compare__list--potato" id="potato">
-                <li>81 000 ₽</li>
-                <li>24 000 ₽</li>
-                <li>20 000 Кг</li>
-                <li>20 ₽</li>
-                <li>400 000 ₽</li>
-                <li>295 000 ₽</li>
-            </ul>
-
-            <ul class="compare__list compare__list--garlic" id="garlic">
-                <li>250 000 ₽</li>
-                <li>21 000 ₽</li>
-                <li>7 000 Кг</li>
-                <li>170 ₽</li>
-                <li>1 190 000 ₽</li>
-                <li>919 000 ₽</li>
-            </ul>
-
-            <ul class="compare__list compare__list--onion" id="onion">
-                <li>45 000 ₽</li>
-                <li>24 000 ₽</li>
-                <li>25 000 Кг</li>
-                <li>15 ₽</li>
-                <li>375 000 ₽</li>
-                <li>306 000 ₽</li>
-            </ul>
-
-        </div>
-
-    </section>
-
-    <section class="video-about">
-        <h2>Видео нашей продукции</h2>
-
-        <div class="container">
-
-            <div class="video video--left">
-                <a class="video__link"
-                   href="https://www.youtube.com/watch?v=jNIe3HmnFVs&t=7s&ab_channel=%D0%95%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D0%B9%D0%9C%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D0%B5%D0%B2">
-                    <img class="video__media" src="https://i.ytimg.com/vi/jNIe3HmnFVs/hqdefault.jpg" alt="">
-                </a>
-                <button class="video__button" aria-label="Запустить видео">&rtrif;</button>
-            </div>
-
-            <div class="video--right">
-                <div class="video">
-                    <a class="video__link"
-                       href="https://www.youtube.com/watch?v=jNIe3HmnFVs&t=7s&ab_channel=%D0%95%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D0%B9%D0%9C%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D0%B5%D0%B2">
-                        <img class="video__media" src="https://i.ytimg.com/vi/jNIe3HmnFVs/hqdefault.jpg" alt="">
-                    </a>
-                    <button class="video__button" aria-label="Запустить видео">&rtrif;</button>
-                </div>
-
-                <div class="video">
-                    <a class="video__link"
-                       href="https://www.youtube.com/watch?v=jNIe3HmnFVs&t=7s&ab_channel=%D0%95%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D0%B9%D0%9C%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D0%B5%D0%B2">
-                        <img class="video__media" src="https://i.ytimg.com/vi/jNIe3HmnFVs/hqdefault.jpg" alt="">
-                    </a>
-                    <button class="video__button" aria-label="Запустить видео">&rtrif;</button>
-                </div>
-
-                <div class="video">
-                    <a class="video__link"
-                       href="https://www.youtube.com/watch?v=jNIe3HmnFVs&t=7s&ab_channel=%D0%95%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D0%B9%D0%9C%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D0%B5%D0%B2">
-                        <img class="video__media" src="https://i.ytimg.com/vi/jNIe3HmnFVs/hqdefault.jpg" alt="">
-                    </a>
-                    <button class="video__button" aria-label="Запустить видео">&rtrif;</button>
-                </div>
-
-                <div class="video">
-                    <a class="video__link"
-                       href="https://www.youtube.com/watch?v=jNIe3HmnFVs&t=7s&ab_channel=%D0%95%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D0%B9%D0%9C%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D0%B5%D0%B2">
-                        <img class="video__media" src="https://i.ytimg.com/vi/jNIe3HmnFVs/hqdefault.jpg" alt="">
-                    </a>
-                    <button class="video__button" aria-label="Запустить видео">&rtrif;</button>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="card__button--wrapper">
-            <button class="card__button" type="button">
-                Смотреть все обзоры
-            </button>
-        </div>
-
-    </section>
-
-    <section class="reviews clearfix">
-
-        <div class="container">
-
-            <blockquote class="reviews__item">
-                <p class="reviews__title">«За качество
-                    отвечаю лично»</p>
-                <cite class="reviews__cite">—Евгений Медведев.</cite>
-            </blockquote>
-
-            <div class="reviews__image">
-                <picture>
-                    <source media="(max-width: 768px)" srcset="./img/reviews-imageSm.jpg">
-                    <img src="./img/reviews-image.jpg" alt="Фотография ростов чеснока">
-                </picture>
-            </div>
-
-            <p class="reviews__text">Мы производим технику для возделывания чеснока: сажалки для чеснока, лука-севка,
-                тюльпанов,
-                гладиулосов, калибровочные машини для калибровки зубков и головок чеснока, линии по дроблению и
-                калибровке чеснока, комбайны для уборки чеснока.
-            </p>
-            <p class="reviews__text">Изделия без посредников, напрямую от производителя. Себестоимость
-                сельськохозяйсвенной продукции в
-                несколько раз ниже.</p>
-            <p class="reviews__text">Широкая линейка техники для чеснока позволит подстроиться под ваши запросы.</p>
-            <a class="reviews__button button" href="#">В каталог</a>
-
-        </div>
-
-    </section>
-
-    <section class="features">
-        <h2>Почему мы?</h2>
-
-        <div class="container">
-
-            <div class="features__item wow slideInLeft">
-                <div class="features__card">
-                    <p class="features__icon">
-                        <svg width="29" height="29">
-                            <use xlink:href="./img/iconsFeatures.svg#arrow"></use>
-                        </svg>
-                    </p>
-                    <p class="features__text">Полный спектр оборудования</p>
-                    <p class="features__subtitle">Мы единственная компания в России которая делает весь спектр
-                        оборудования для возделывания чеснока</p>
-                </div>
-            </div>
-
-            <div class="features__item wow slideInUp">
-                <div class="features__card">
-                    <p class="features__icon">
-                        <svg width="29" height="29">
-                            <use xlink:href="./img/iconsFeatures.svg#clock"></use>
-                        </svg>
-                    </p>
-                    <p class="features__text">Экономия денег и <br> времени</p>
-                    <p class="features__subtitle">Если Вы цените свое время и деньги, тогда Вам стоит обратиться в нашу
-                        компанию.</p>
-                </div>
-            </div>
-
-            <div class="features__item wow slideInUp">
-                <div class="features__card">
-                    <p class="features__icon">
-                        <svg width="30" height="30">
-                            <use xlink:href="./img/iconsFeatures.svg#tools"></use>
-                        </svg>
-                    </p>
-                    <p class="features__text">Собственное <br> производство</p>
-                    <p class="features__subtitle">Работа напрямую без каких-либо посредников.</p>
-                </div>
-            </div>
-
-            <div class="features__item wow slideInRight">
-                <div class="features__card">
-                    <p class="features__icon">
-                        <svg width="23" height="29">
-                            <use xlink:href="./img/iconsFeatures.svg#like"></use>
-                        </svg>
-                    </p>
-                    <p class="features__text">Вся техника прошла испытания и проверена</p>
-                    <p class="features__subtitle">Мы позаботились о том, что бы Вы не переживали о качестве
-                        продукции.</p>
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="carousel">
-        <h2>Нам доверяют</h2>
-        <div class="container">
-
-            <div class="owl-carousel">
-                <p class="carousel__item">
-                    <img class="carousel__img" src="./img/agroterra.jpg" alt="Логотип компании: Агротерра">
-                </p>
-
-                <p class="carousel__item">
-                    <img class="carousel__img" src="./img/bioton.jpg" alt="Логотип компании: Био-тон">
-                </p>
-
-                <p class="carousel__item">
-                    <img class="carousel__img" src="./img/argo.jpg" alt="Логотип компании: Агрокомплекс Выселковский">
-                </p>
-
-                <p class="carousel__item">
-                    <img class="carousel__img" src="./img/rusagro.jpg" alt="Логотип компании: Русагро">
-                </p>
-
-                <p class="carousel__item">
-                    <img class="carousel__img" src="./img/redwest.jpg" alt="Красный Восток">
-                </p>
-
-            </div>
-
-        </div>
-    </section>
 </main>
 
 <footer>
@@ -559,9 +331,5 @@
     </div>
 </div>
 
-<script src="./script/wow.min.js"></script>
-<script src="./script/jquery-3.3.1.min.js"></script>
-<script src="./script/owl.carousel.min.js"></script>
-<script src="./script/main.js"></script>
 </body>
 </html>
