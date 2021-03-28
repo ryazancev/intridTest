@@ -150,3 +150,44 @@ findVideos();
 //Анимация
 
 new WOW().init();
+
+//owlcarousel
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+        loop:true,
+        navText: ['&larr;', '&rarr;'],
+        margin:0,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:2,
+                dots: true,
+            },
+            768: {
+                items: 3,
+            },
+            1024:{
+                dots: false,
+                items:5,
+            }
+        }
+    })
+});
+
+const carousel = document.querySelector('.owl-carousel');
+
+carousel.addEventListener('mouseover', evt => {
+    const target = evt.target;
+
+    if (target.matches('.owl-prev')) {
+        $(".owl-carousel").trigger('prev.owl.carousel');
+    }
+
+    if (target.matches('.owl-next')) {
+        $(".owl-carousel").trigger('next.owl.carousel');
+    }
+});
+
+
+
+
