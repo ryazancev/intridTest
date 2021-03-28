@@ -262,7 +262,10 @@ header a:hover {
     .header__item--phone {
         display: block;
         margin-top: -16px;
+        fill: #FFFFFF;
     }
+
+
 
     .header__button {
         width: 28px;
@@ -291,12 +294,66 @@ nav .container {
 }
 
 nav {
+    overflow: hidden;
+    position: relative;
     height: 49px;
+    background-color: #FFFFFF;
 }
 
 .nav__icon {
     margin-right: 3px;
     vertical-align: text-bottom;
+
+}
+
+.nav__icon--side {
+    position: absolute;
+    top: 20%;
+    transition: all 0.5s ease;
+}
+
+.nav__icon--side-right {
+    transform: translateX(1000px);
+    right: 10%;
+}
+
+.nav__icon--side-left {
+    transform: translateX(-1000px);
+    left: 10%;
+}
+
+.nav__icon--side-left svg {
+    fill: #250404;
+}
+
+@media screen and (max-width: 1570px) {
+    .nav__icon--side-right {
+        right: 5%;
+    }
+
+    .nav__icon--side-left {
+        left: 5%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .nav__icon--side-right {
+        right: 2%;
+    }
+
+    .nav__icon--side-left {
+        left: 2%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .nav__icon--side-right {
+        right: 0;
+    }
+
+    .nav__icon--side-left {
+        left: 0;
+    }
 }
 
 @media screen and (max-width: 1012px) {
@@ -738,7 +795,7 @@ nav {
     }
 
     .card__descr {
-        font-size: 13px;
+        font-size: 14px;
         line-height: 13px;
     }
 
@@ -1289,7 +1346,7 @@ nav {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 414px) {
 
     .reviews {
         height: 720px;
@@ -1648,6 +1705,25 @@ footer li {
     margin-right: 114px;
 }
 
+.footer__link {
+    position: relative;
+}
+
+.footer__link:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background: #666666;
+    transition: all 0.2s ease-in;
+}
+
+footer li:hover .footer__link:after {
+    width: 100%;
+}
+
 footer li:nth-child(3n) {
     margin-bottom: 0;
 }
@@ -1708,7 +1784,7 @@ footer li:nth-child(3n) {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 680px) {
     .footer__link--logo {
         margin-right: 5px;
     }
@@ -1718,7 +1794,7 @@ footer li:nth-child(3n) {
     }
 }
 
-@media only screen and (max-width: 533px) {
+@media only screen and (max-width: 600px) {
     footer {
         position: relative;
         padding-top: 200px;
@@ -1746,6 +1822,12 @@ footer li:nth-child(3n) {
     }
 }
 
+@media screen and (max-width: 464px) {
+    footer ul {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 375px) {
     footer {
         height: 298px;
@@ -1757,8 +1839,16 @@ footer li:nth-child(3n) {
         display: none;
     }
 
+    .footer__address {
+        width: auto;
+    }
+
+    .footer__address .footer__link {
+        width: 146px;
+    }
+
     .footer__link--logo {
-        margin-right: 60px;
+        margin-right: 0;
     }
 
     .intrid {

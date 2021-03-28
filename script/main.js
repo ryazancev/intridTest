@@ -10,6 +10,20 @@ const popupMap = document.querySelector('.popup-map');
 const tabsSection = document.querySelector('.compare');
 
 
+//Scroll Nav
+window.addEventListener('scroll', () => {
+    const navIcon = navSite.querySelectorAll('.nav__icon--side');
+
+    if (document.documentElement.scrollTop >= 76) {
+        navSite.style.position = 'sticky';
+        navSite.style.top = 0;
+        navSite.style.zIndex = 2;
+        navIcon.forEach(item => item.style.transform = `translateX(0)`)
+    } else {
+        navIcon.forEach(item => item.style.transform = '')
+    }
+})
+
 // Открываем меню по клику на бургер и открываем карту по клику на адрес
 pageHeader.addEventListener('click', evt => {
     const target = evt.target;

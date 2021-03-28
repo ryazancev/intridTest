@@ -45,6 +45,13 @@
 </header>
 
 <nav class="menu-close">
+
+    <a href="#" class="nav__icon--side nav__icon--side-left">
+        <svg width="28" height="28">
+            <use xlink:href="./img/iconsHeader.svg#phone"></use>
+        </svg>
+    </a>
+
     <div class="container">
         <a class="nav__link" href="#">
             <svg class="nav__icon" width="16" height="16">
@@ -89,6 +96,12 @@
         </a>
 
     </div>
+
+    <a href="#" class="nav__icon--side nav__icon--side-right">
+        <svg width="28" height="28">
+            <use xlink:href="./img/iconsMenu.svg#contacts"></use>
+        </svg>
+    </a>
 
 </nav>
 <div class="nav--overlay menu-close"></div>
@@ -382,7 +395,7 @@
 
             <div class="reviews__image">
                 <picture>
-                    <source media="(max-width: 768px)" srcset="./img/reviews-imageSm.jpg">
+                    <source media="(max-width: 414px)" srcset="./img/reviews-imageSm.jpg">
                     <img src="./img/reviews-image.jpg" alt="Фотография ростов чеснока">
                 </picture>
             </div>
@@ -471,7 +484,7 @@
         <h2>Нам доверяют</h2>
         <div class="container">
 
-            <div class="owl-carousel">
+            <div class="owl-carousel owl-theme">
                 <p class="carousel__item">
                     <img class="carousel__img" src="./img/agroterra.jpg" alt="Логотип компании: Агротерра">
                 </p>
@@ -498,62 +511,62 @@
     </section>
 </main>
 
-<!--<footer>-->
+<footer>
 
-<!--    <div class="container">-->
+    <div class="container">
 
-<!--        <a class="footer__link footer__link&#45;&#45;logo" href="#">-->
-<!--            <svg width="129" height="27" viewBox="0 0 129 27" fill="#6B6B6B" xmlns="http://www.w3.org/2000/svg">-->
-<!--                <path d="M0 27H5.05291L6.99999 15.8261L8.99999 27H13L15 15.8261L17.0001 27L25 27L20 0.0217567H13L11.0001 11.8247L8.99999 0.0217567H2L0 27Z"-->
-<!--                />-->
-<!--                <path d="M27.2693 5.28988V27H44.2616V21.1257H36.322V15.8261H44.2616V10.8161H36.322V5.28988H44.2616V0.0217567H35.6204L27.2693 5.28988Z"-->
-<!--                />-->
-<!--                <path d="M46.1554 5.28988V27H60.198L67.2193 21.7319V7.78927C67.2193 6.21583 66.4787 4.73417 65.2201 3.78986L61.5316 1.02234C60.666 0.372863 59.613 0.0217567 58.5308 0.0217567H53.1767L46.1554 5.28988ZM55.0493 21.1257V5.28988L58.1243 7.85415V21.1257H55.0493Z"-->
-<!--                />-->
-<!--                <path d="M77.2559 21.1257V0L69.2315 0.0217567V21.9089L77.2559 27H79.262L87.2863 21.9089V0.0217567L79.262 0V21.1257H77.2559Z"-->
-<!--                />-->
-<!--                <path d="M89.0499 5.28988V27H106.042V21.1257H98.1027V15.8261H106.042V10.8161H98.1027V5.28988H106.042V0.0217567H97.4011L89.0499 5.28988Z"-->
-<!--                />-->
-<!--                <path d="M107.936 5.28988V27H121.979L129 21.7319V7.78927C129 6.21583 128.259 4.73416 127.001 3.78985L123.312 1.02234C122.447 0.372862 121.394 0.0217567 120.311 0.0217567H114.957L107.936 5.28988ZM116.83 21.1257V5.28988L119.905 7.85415V21.1257H116.83Z"-->
-<!--                />-->
-<!--            </svg>-->
-<!--            Техника для чеснока-->
-<!--        </a>-->
+        <a class="footer__link footer__link--logo" href="#">
+            <svg width="129" height="27" viewBox="0 0 129 27" fill="#6B6B6B" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 27H5.05291L6.99999 15.8261L8.99999 27H13L15 15.8261L17.0001 27L25 27L20 0.0217567H13L11.0001 11.8247L8.99999 0.0217567H2L0 27Z"
+                />
+                <path d="M27.2693 5.28988V27H44.2616V21.1257H36.322V15.8261H44.2616V10.8161H36.322V5.28988H44.2616V0.0217567H35.6204L27.2693 5.28988Z"
+                />
+                <path d="M46.1554 5.28988V27H60.198L67.2193 21.7319V7.78927C67.2193 6.21583 66.4787 4.73417 65.2201 3.78986L61.5316 1.02234C60.666 0.372863 59.613 0.0217567 58.5308 0.0217567H53.1767L46.1554 5.28988ZM55.0493 21.1257V5.28988L58.1243 7.85415V21.1257H55.0493Z"
+                />
+                <path d="M77.2559 21.1257V0L69.2315 0.0217567V21.9089L77.2559 27H79.262L87.2863 21.9089V0.0217567L79.262 0V21.1257H77.2559Z"
+                />
+                <path d="M89.0499 5.28988V27H106.042V21.1257H98.1027V15.8261H106.042V10.8161H98.1027V5.28988H106.042V0.0217567H97.4011L89.0499 5.28988Z"
+                />
+                <path d="M107.936 5.28988V27H121.979L129 21.7319V7.78927C129 6.21583 128.259 4.73416 127.001 3.78985L123.312 1.02234C122.447 0.372862 121.394 0.0217567 120.311 0.0217567H114.957L107.936 5.28988ZM116.83 21.1257V5.28988L119.905 7.85415V21.1257H116.83Z"
+                />
+            </svg>
+            Техника для чеснока
+        </a>
 
-<!--        <ul>-->
-<!--            <li>-->
-<!--                <a class="footer__link" href="#">Каталог</a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a class="footer__link" href="#">Прайс-лист</a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a class="footer__link" href="#">О компании</a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a class="footer__link" href="#">Оплата и доставка</a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a class="footer__link" href="#">Вопросы и ответы</a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a class="footer__link" href="#">Контакты</a>-->
-<!--            </li>-->
-<!--        </ul>-->
+        <ul>
+            <li>
+                <a class="footer__link" href="#">Каталог</a>
+            </li>
+            <li>
+                <a class="footer__link" href="#">Прайс-лист</a>
+            </li>
+            <li>
+                <a class="footer__link" href="#">О компании</a>
+            </li>
+            <li>
+                <a class="footer__link" href="#">Оплата и доставка</a>
+            </li>
+            <li>
+                <a class="footer__link" href="#">Вопросы и ответы</a>
+            </li>
+            <li>
+                <a class="footer__link" href="#">Контакты</a>
+            </li>
+        </ul>
 
-<!--        <div class="footer__address">-->
-<!--            <a class="footer__link" href="tel:+7(919)2493994">+ 7 (919) 249 39 94</a>-->
-<!--            <a class="footer__link" href="#">Воронеж <br> пр-т Патриотов, 11/3</a>-->
-<!--        </div>-->
+        <div class="footer__address">
+            <a class="footer__link" href="tel:+7(919)2493994">+ 7 (919) 249 39 94</a>
+            <a class="footer__link" href="#">Воронеж <br> пр-т Патриотов, 11/3</a>
+        </div>
 
-<!--    </div>-->
+    </div>
 
-<!--    <div class="container">-->
-<!--        <p>© ИП Медведев Е.П.</p>-->
-<!--        <a class="intrid" href="https://intrid.ru/">made in INTRID</a>-->
-<!--    </div>-->
+    <div class="container">
+        <p>© ИП Медведев Е.П.</p>
+        <a class="intrid" href="https://intrid.ru/">made in INTRID</a>
+    </div>
 
-<!--</footer>-->
+</footer>
 
 <div class="popup-map">
     <div class="popup-map__item" style="position:relative;overflow:hidden;"><a
