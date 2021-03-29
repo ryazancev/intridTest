@@ -2399,7 +2399,7 @@ footer li:nth-child(3n) {
     margin: 0 auto;
     font-size: 24px;
     line-height: 23px;
-    margin-bottom: 24px;
+    margin-bottom: 218px;
 }
 
 .price__list .button--wrapper {
@@ -2423,15 +2423,45 @@ footer li:nth-child(3n) {
     line-height: 17px;
 }
 
-.price__list img {
-    margin-bottom: 16px;
-}
-
 .price__list--head {
     text-align: left;
     width: 33%;
-    padding-top: 55px;
+    padding-bottom: 125px;
 }
+
+.price__link {
+    font-size: 18px;
+    text-align: center;
+    position: absolute;
+    width: 170px;
+    top: -155px;
+}
+
+.price__link img {
+    width: 170px;
+    margin-bottom: 24px;
+}
+
+.price__link--2 {
+    left: 35%;
+}
+
+.price__link--3 {
+    left: 51%;
+}
+
+.price__link--4 {
+    left: 67%;
+}
+
+.price__link--5 {
+    right: 2%;
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
 
 @media screen and (max-width: 768px) {
     .price__title {
