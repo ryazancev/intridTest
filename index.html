@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Тестовое задание</title>
     <link rel="stylesheet" href="./style/animate.css">
-    <link rel="stylesheet" href="./libs/owlcarousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="./libs/owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./style/owl.carousel.min.css">
+    <link rel="stylesheet" href="./style/owl.theme.default.min.css">
     <link rel="stylesheet" href="./style/normalize.css">
     <link rel="stylesheet" href="./style/style.css">
 </head>
@@ -46,13 +46,21 @@
 
 <nav class="menu-close">
 
-    <a href="#" class="nav__icon--side nav__icon--side-left">
+    <a href="tel:+7(919)2493994" class="nav__icon--side nav__icon--side-left">
         <svg width="28" height="28">
             <use xlink:href="./img/iconsHeader.svg#phone"></use>
         </svg>
     </a>
 
     <div class="container">
+
+        <a class="nav__link" href="#">
+            <svg class="nav__icon" width="16" height="16">
+                <use xlink:href="./img/iconsMenu.svg#home"></use>
+            </svg>
+            Главная
+        </a>
+
         <a class="nav__link" href="#">
             <svg class="nav__icon" width="16" height="16">
                 <use xlink:href="./img/iconsMenu.svg#catalog"></use>
@@ -393,22 +401,23 @@
                 <cite class="reviews__cite">—Евгений Медведев.</cite>
             </blockquote>
 
-            <div class="reviews__image">
-                <picture>
-                    <source media="(max-width: 414px)" srcset="./img/reviews-imageSm.jpg">
-                    <img src="./img/reviews-image.jpg" alt="Фотография ростов чеснока">
-                </picture>
-            </div>
 
-            <p class="reviews__text">Мы производим технику для возделывания чеснока: сажалки для чеснока, лука-севка,
+            <picture class="reviews__image">
+                <source media="(max-width: 414px)" srcset="./img/reviews-imageSm.jpg">
+                <img src="./img/reviews-image.jpg" alt="Фотография ростов чеснока">
+            </picture>
+
+
+            <p>Мы производим технику для возделывания чеснока: сажалки для чеснока, лука-севка,
                 тюльпанов,
                 гладиулосов, калибровочные машини для калибровки зубков и головок чеснока, линии по дроблению и
                 калибровке чеснока, комбайны для уборки чеснока.
             </p>
-            <p class="reviews__text">Изделия без посредников, напрямую от производителя. Себестоимость
+            <p>Изделия без посредников, напрямую от производителя. Себестоимость
                 сельськохозяйсвенной продукции в
-                несколько раз ниже.</p>
-            <p class="reviews__text">Широкая линейка техники для чеснока позволит подстроиться под ваши запросы.</p>
+                несколько раз ниже.
+            </p>
+            <p>Широкая линейка техники для чеснока позволит подстроиться под ваши запросы.</p>
 
             <div class="button--wrapper">
                 <button class="button-main button-main--red" type="button">
@@ -582,7 +591,7 @@
 
 
 <script src="./script/jquery-3.3.1.min.js"></script>
-<script src="./libs/owlcarousel/owl.carousel.min.js"></script>
+<script src="./script/owl.carousel.min.js"></script>
 <script src="./script/wow.min.js"></script>
 <script src="./script/main.js"></script>
 </body>

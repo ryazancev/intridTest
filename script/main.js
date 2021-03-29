@@ -13,13 +13,18 @@ const tabsSection = document.querySelector('.compare');
 //Scroll Nav
 window.addEventListener('scroll', () => {
     const navIcon = navSite.querySelectorAll('.nav__icon--side');
+    const headLink = document.querySelector('.nav__link');
 
     if (document.documentElement.scrollTop >= 76) {
         navSite.style.position = 'sticky';
         navSite.style.top = 0;
         navSite.style.zIndex = 2;
-        navIcon.forEach(item => item.style.transform = `translateX(0)`)
+        headLink.style.display = 'block';
+        navIcon.forEach(item => {
+            item.style.transform = `translateX(0)`;
+        })
     } else {
+        headLink.style.display = '';
         navIcon.forEach(item => item.style.transform = '')
     }
 })
@@ -64,53 +69,54 @@ navSite.addEventListener('click', evt => {
 
 //Табы
 
-tabsSection.addEventListener('click', evt => {
-    evt.preventDefault();
-    const target = evt.target;
+if (tabsSection) {
+    tabsSection.addEventListener('click', evt => {
+        evt.preventDefault();
+        const target = evt.target;
 
-    const garlic = document.getElementById('garlic');
-    const potato = document.getElementById('potato');
-    const onion = document.getElementById('onion');
-    const garlicTab = document.querySelector('.compare__link--g');
-    const potatoTab = document.querySelector('.compare__link--p');
-    const onionTab = document.querySelector('.compare__link--o');
-
-
-    if (target === garlicTab) {
-        garlic.style.display = 'block';
-        garlicTab.classList.add('compare__link--active');
-
-        potato.style.display = 'none';
-        potatoTab.classList.remove('compare__link--active');
-
-        onion.style.display = 'none';
-        onionTab.classList.remove('compare__link--active');
-    }
-
-    if (target === potatoTab) {
-        potato.style.display = 'block';
-        potatoTab.classList.add('compare__link--active');
-
-        garlic.style.display = 'none';
-        garlicTab.classList.remove('compare__link--active');
-
-        onion.style.display = 'none';
-        onionTab.classList.remove('compare__link--active');
-    }
-
-    if (target === onionTab) {
-        onion.style.display = 'block';
-        onionTab.classList.add('compare__link--active');
-
-        garlic.style.display = 'none';
-        garlicTab.classList.remove('compare__link--active');
-
-        potato.style.display = 'none';
-        potatoTab.classList.remove('compare__link--active');
-    }
+        const garlic = document.getElementById('garlic');
+        const potato = document.getElementById('potato');
+        const onion = document.getElementById('onion');
+        const garlicTab = document.querySelector('.compare__link--g');
+        const potatoTab = document.querySelector('.compare__link--p');
+        const onionTab = document.querySelector('.compare__link--o');
 
 
-})
+        if (target === garlicTab) {
+            garlic.style.display = 'block';
+            garlicTab.classList.add('compare__link--active');
+
+            potato.style.display = 'none';
+            potatoTab.classList.remove('compare__link--active');
+
+            onion.style.display = 'none';
+            onionTab.classList.remove('compare__link--active');
+        }
+
+        if (target === potatoTab) {
+            potato.style.display = 'block';
+            potatoTab.classList.add('compare__link--active');
+
+            garlic.style.display = 'none';
+            garlicTab.classList.remove('compare__link--active');
+
+            onion.style.display = 'none';
+            onionTab.classList.remove('compare__link--active');
+        }
+
+        if (target === onionTab) {
+            onion.style.display = 'block';
+            onionTab.classList.add('compare__link--active');
+
+            garlic.style.display = 'none';
+            garlicTab.classList.remove('compare__link--active');
+
+            potato.style.display = 'none';
+            potatoTab.classList.remove('compare__link--active');
+        }
+    })
+}
+
 
 
 //Видео
@@ -166,41 +172,48 @@ findVideos();
 new WOW().init();
 
 //owlcarousel
-$(document).ready(function(){
-    $(".owl-carousel").owlCarousel({
-        loop:true,
-        navText: ['&larr;', '&rarr;'],
-        margin:0,
-        responsiveClass:true,
-        responsive:{
-            0:{
-                items:2,
-                dots: true,
-            },
-            768: {
-                items: 3,
-            },
-            1024:{
-                dots: false,
-                items:5,
-            }
-        }
-    })
-});
-
 const carousel = document.querySelector('.owl-carousel');
 
-carousel.addEventListener('mouseover', evt => {
-    const target = evt.target;
+if (carousel) {
+    $(document).ready(function(){
+        carousel.owlCarousel({
+            loop:true,
+            navText: ['&larr;', '&rarr;'],
+            margin:0,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:1,
+                    dots: true,
+                },
+                360:{
+                    items:1,
+                    dots: true,
+                },
+                768: {
+                    items: 3,
+                },
+                1024:{
+                    dots: false,
+                    items:5,
+                }
+            }
+        })
+    });
 
-    if (target.matches('.owl-prev')) {
-        $(".owl-carousel").trigger('prev.owl.carousel');
-    }
+    carousel.addEventListener('mouseover', evt => {
+        const target = evt.target;
 
-    if (target.matches('.owl-next')) {
-        $(".owl-carousel").trigger('next.owl.carousel');
-    }
-});
+        if (target.matches('.owl-prev')) {
+            $(".owl-carousel").trigger('prev.owl.carousel');
+        }
+
+        if (target.matches('.owl-next')) {
+            $(".owl-carousel").trigger('next.owl.carousel');
+        }
+    });
+}
+
 
 
 
