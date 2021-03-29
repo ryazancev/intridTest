@@ -6,10 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Тестовое задание</title>
-    <link rel="stylesheet" href="./style/owl.carousel.min.css">
-    <link rel="stylesheet" href="./style/owl.theme.default.min.css">
     <link rel="stylesheet" href="./style/animate.css">
-    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="./libs/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./libs/owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./style/normalize.css">
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
@@ -45,6 +45,13 @@
 </header>
 
 <nav class="menu-close">
+
+    <a href="#" class="nav__icon--side nav__icon--side-left">
+        <svg width="28" height="28">
+            <use xlink:href="./img/iconsHeader.svg#phone"></use>
+        </svg>
+    </a>
+
     <div class="container">
         <a class="nav__link" href="#">
             <svg class="nav__icon" width="16" height="16">
@@ -90,6 +97,12 @@
 
     </div>
 
+    <a href="#" class="nav__icon--side nav__icon--side-right">
+        <svg width="28" height="28">
+            <use xlink:href="./img/iconsMenu.svg#contacts"></use>
+        </svg>
+    </a>
+
 </nav>
 <div class="nav--overlay menu-close"></div>
 
@@ -100,7 +113,7 @@
         <div class="container">
             <p class="section-main__title">Акция! Распродажа техники по цене 2020 г.!</p>
             <p class="section-main__subtitle">Действует до 31.03.2021 г.</p>
-            <a class="section-main__button button" href="#">В каталог</a>
+            <a class="section-main__button" href="#">В каталог</a>
         </div>
 
     </section>
@@ -114,82 +127,14 @@
             <div class="card__wrapper">
                 <a href="#" class="card">
                     <picture>
-                        <source srcset="./img/cardSmall.jpg" media="(max-width: 1024px)">
-                        <img src="./img/card-1.jpg" alt="Машинка очистки чеснока">
-                    </picture>
-                    <p class="card__descr">Сажалка для чеснока четырехрядная</p>
-                    <span class="card__price card__price--new">от 235 000 ₽</span>
-                    <span class="card__price card__price--old">от 270 000 ₽</span>
-                    <div class="card__button--wrapper">
-                        <button class="card__button" type="button">
-                            Подробнее
-                        </button>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card__wrapper">
-                <a href="#" class="products__card card">
-                    <picture>
-                        <source srcset="./img/cardSmall.jpg" media="(max-width: 1024px)">
-                        <img src="./img/card-2.jpg" alt="Машинка очистки чеснока">
-                    </picture>
-                    <p class="card__descr">Линия по дроблению и калибровке чеснока</p>
-                    <span class="card__price card__price--new">от 235 000 ₽</span>
-                    <span class="card__price card__price--old">от 270 000 ₽</span>
-                    <div class="card__button--wrapper">
-                        <button class="card__button" type="button">
-                            Подробнее
-                        </button>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card__wrapper">
-                <a href="#" class="products__card card">
-                    <picture>
-                        <source srcset="./img/cardSmall.jpg" media="(max-width: 1024px)">
-                        <img src="./img/card-3.jpg" alt="Сортровщик зубков чеснока">
-                    </picture>
-                    <p class="card__descr">Машинка очистки чеснока</p>
-                    <span class="card__price card__price--new">от 235 000 ₽</span>
-                    <span class="card__price card__price--old">от 270 000 ₽</span>
-                    <div class="card__button--wrapper">
-                        <button class="card__button" type="button">
-                            Подробнее
-                        </button>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card__wrapper">
-                <a href="#" class="products__card card">
-                    <picture>
-                        <source srcset="./img/cardSmall.jpg" media="(max-width: 1024px)">
-                        <img src="./img/card-4.jpg" alt="Калибровщик головок чеснова">
-                    </picture>
-                    <p class="card__descr">Калибровщик/сортировщик зубков чеснока</p>
-                    <span class="card__price card__price--new">от 235 000 ₽</span>
-                    <span class="card__price card__price--old">от 270 000 ₽</span>
-                    <div class="card__button--wrapper">
-                        <button class="card__button" type="button">
-                            Подробнее
-                        </button>
-                    </div>
-                </a>
-            </div>
-
-            <div class="card__wrapper">
-                <a href="#" class="products__card card">
-                    <picture>
-                        <source srcset="./img/cardSmall.jpg" media="(max-width: 1024px)">
+                        <source srcset="./img/cardSmall.jpg" media="(max-width: 768px)">
                         <img src="./img/card-1.jpg" alt="Машинка очистки чеснока">
                     </picture>
                     <p class="card__descr">Машинка очистки чеснока</p>
                     <span class="card__price card__price--new">от 235 000 ₽</span>
                     <span class="card__price card__price--old">от 270 000 ₽</span>
-                    <div class="card__button--wrapper">
-                        <button class="card__button" type="button">
+                    <div class="button--wrapper card__button--wrapper">
+                        <button class="button-main card__button" type="button">
                             Подробнее
                         </button>
                     </div>
@@ -199,14 +144,14 @@
             <div class="card__wrapper">
                 <a href="#" class="products__card card">
                     <picture>
-                        <source srcset="./img/cardSmall.jpg" media="(max-width: 1024px)">
+                        <source srcset="./img/cardSmall.jpg" media="(max-width: 768px)">
                         <img src="./img/card-2.jpg" alt="Машинка очистки чеснока">
                     </picture>
                     <p class="card__descr">Машинка очистки чеснока</p>
                     <span class="card__price card__price--new">от 235 000 ₽</span>
                     <span class="card__price card__price--old">от 270 000 ₽</span>
-                    <div class="card__button--wrapper">
-                        <button class="card__button" type="button">
+                    <div class="button--wrapper card__button--wrapper">
+                        <button class="button-main card__button" type="button">
                             Подробнее
                         </button>
                     </div>
@@ -216,14 +161,14 @@
             <div class="card__wrapper">
                 <a href="#" class="products__card card">
                     <picture>
-                        <source srcset="./img/cardSmall.jpg" media="(max-width: 1024px)">
+                        <source srcset="./img/cardSmall.jpg" media="(max-width: 768px)">
                         <img src="./img/card-3.jpg" alt="Сортровщик зубков чеснока">
                     </picture>
                     <p class="card__descr">Машинка очистки чеснока</p>
                     <span class="card__price card__price--new">от 235 000 ₽</span>
                     <span class="card__price card__price--old">от 270 000 ₽</span>
-                    <div class="card__button--wrapper">
-                        <button class="card__button" type="button">
+                    <div class="button--wrapper card__button--wrapper">
+                        <button class="button-main card__button" type="button">
                             Подробнее
                         </button>
                     </div>
@@ -233,14 +178,82 @@
             <div class="card__wrapper">
                 <a href="#" class="products__card card">
                     <picture>
-                        <source srcset="./img/cardSmall.jpg" media="(max-width: 1024px)">
+                        <source srcset="./img/cardSmall.jpg" media="(max-width: 768px)">
                         <img src="./img/card-4.jpg" alt="Калибровщик головок чеснова">
                     </picture>
                     <p class="card__descr">Машинка очистки чеснока</p>
                     <span class="card__price card__price--new">от 235 000 ₽</span>
                     <span class="card__price card__price--old">от 270 000 ₽</span>
-                    <div class="card__button--wrapper">
-                        <button class="card__button" type="button">
+                    <div class="button--wrapper card__button--wrapper">
+                        <button class="button-main card__button" type="button">
+                            Подробнее
+                        </button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card__wrapper">
+                <a href="#" class="products__card card">
+                    <picture>
+                        <source srcset="./img/cardSmall.jpg" media="(max-width: 768px)">
+                        <img src="./img/card-1.jpg" alt="Машинка очистки чеснока">
+                    </picture>
+                    <p class="card__descr">Машинка очистки чеснока</p>
+                    <span class="card__price card__price--new">от 235 000 ₽</span>
+                    <span class="card__price card__price--old">от 270 000 ₽</span>
+                    <div class="button--wrapper card__button--wrapper">
+                        <button class="button-main card__button" type="button">
+                            Подробнее
+                        </button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card__wrapper">
+                <a href="#" class="products__card card">
+                    <picture>
+                        <source srcset="./img/cardSmall.jpg" media="(max-width: 768px)">
+                        <img src="./img/card-2.jpg" alt="Машинка очистки чеснока">
+                    </picture>
+                    <p class="card__descr">Машинка очистки чеснока</p>
+                    <span class="card__price card__price--new">от 235 000 ₽</span>
+                    <span class="card__price card__price--old">от 270 000 ₽</span>
+                    <div class="button--wrapper card__button--wrapper">
+                        <button class="button-main card__button" type="button">
+                            Подробнее
+                        </button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card__wrapper">
+                <a href="#" class="products__card card">
+                    <picture>
+                        <source srcset="./img/cardSmall.jpg" media="(max-width: 768px)">
+                        <img src="./img/card-3.jpg" alt="Сортровщик зубков чеснока">
+                    </picture>
+                    <p class="card__descr">Машинка очистки чеснока</p>
+                    <span class="card__price card__price--new">от 235 000 ₽</span>
+                    <span class="card__price card__price--old">от 270 000 ₽</span>
+                    <div class="button--wrapper card__button--wrapper">
+                        <button class="button-main card__button" type="button">
+                            Подробнее
+                        </button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card__wrapper">
+                <a href="#" class="products__card card">
+                    <picture>
+                        <source srcset="./img/cardSmall.jpg" media="(max-width: 768px)">
+                        <img src="./img/card-4.jpg" alt="Калибровщик головок чеснова">
+                    </picture>
+                    <p class="card__descr">Машинка очистки чеснока</p>
+                    <span class="card__price card__price--new">от 235 000 ₽</span>
+                    <span class="card__price card__price--old">от 270 000 ₽</span>
+                    <div class="button--wrapper card__button--wrapper">
+                        <button class="button-main card__button" type="button">
                             Подробнее
                         </button>
                     </div>
@@ -249,10 +262,14 @@
 
         </div>
 
-        <a class="cards__button button" href="#">В каталог</a>
-        <div class="card__button--wrapper cards__button--mobile">
-            <button class="card__button" type="button">
-                Смотреть все
+        <div class="button--wrapper">
+            <button class="button-main button-main--red" type="button">
+                В каталог
+            </button>
+        </div>
+        <div class="button--wrapper card__button--mobile">
+            <button class="button-main" type="button">
+                Подробнее
             </button>
         </div>
 
@@ -264,9 +281,9 @@
 
         <div class="container">
 
-            <a class="compare__link compare__link--g compare__link--active">Чеснок</a>
-            <a class="compare__link compare__link--p">Картофель</a>
-            <a class="compare__link compare__link--o">Лук</a>
+            <a class="compare__link compare__link--g compare__link--active" href="#">Чеснок</a>
+            <a class="compare__link compare__link--p" href="#">Картофель</a>
+            <a class="compare__link compare__link--o" href="#">Лук</a>
 
             <ul class="compare__list compare__list--head">
                 <li>Стоимость семян на 1 Га:</li>
@@ -313,7 +330,7 @@
 
         <div class="container">
 
-            <div class="video video--left">
+            <div class="video video--left video--enabled ">
                 <a class="video__link"
                    href="https://www.youtube.com/watch?v=jNIe3HmnFVs&t=7s&ab_channel=%D0%95%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D0%B9%D0%9C%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D0%B5%D0%B2">
                     <img class="video__media" src="https://i.ytimg.com/vi/jNIe3HmnFVs/hqdefault.jpg" alt="">
@@ -322,7 +339,7 @@
             </div>
 
             <div class="video--right">
-                <div class="video">
+                <div class="video video--enabled">
                     <a class="video__link"
                        href="https://www.youtube.com/watch?v=jNIe3HmnFVs&t=7s&ab_channel=%D0%95%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D0%B9%D0%9C%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D0%B5%D0%B2">
                         <img class="video__media" src="https://i.ytimg.com/vi/jNIe3HmnFVs/hqdefault.jpg" alt="">
@@ -330,7 +347,7 @@
                     <button class="video__button" aria-label="Запустить видео">&rtrif;</button>
                 </div>
 
-                <div class="video">
+                <div class="video video--enabled">
                     <a class="video__link"
                        href="https://www.youtube.com/watch?v=jNIe3HmnFVs&t=7s&ab_channel=%D0%95%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D0%B9%D0%9C%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D0%B5%D0%B2">
                         <img class="video__media" src="https://i.ytimg.com/vi/jNIe3HmnFVs/hqdefault.jpg" alt="">
@@ -338,7 +355,7 @@
                     <button class="video__button" aria-label="Запустить видео">&rtrif;</button>
                 </div>
 
-                <div class="video">
+                <div class="video video--enabled">
                     <a class="video__link"
                        href="https://www.youtube.com/watch?v=jNIe3HmnFVs&t=7s&ab_channel=%D0%95%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D0%B9%D0%9C%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D0%B5%D0%B2">
                         <img class="video__media" src="https://i.ytimg.com/vi/jNIe3HmnFVs/hqdefault.jpg" alt="">
@@ -346,7 +363,7 @@
                     <button class="video__button" aria-label="Запустить видео">&rtrif;</button>
                 </div>
 
-                <div class="video">
+                <div class="video video--enabled">
                     <a class="video__link"
                        href="https://www.youtube.com/watch?v=jNIe3HmnFVs&t=7s&ab_channel=%D0%95%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D0%B9%D0%9C%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D0%B5%D0%B2">
                         <img class="video__media" src="https://i.ytimg.com/vi/jNIe3HmnFVs/hqdefault.jpg" alt="">
@@ -358,9 +375,9 @@
 
         </div>
 
-        <div class="card__button--wrapper">
-            <button class="card__button" type="button">
-                Смотреть все обзоры
+        <div class="button--wrapper">
+            <button class="button-main" type="button">
+                Смотреть на YouTube
             </button>
         </div>
 
@@ -378,7 +395,7 @@
 
             <div class="reviews__image">
                 <picture>
-                    <source media="(max-width: 768px)" srcset="./img/reviews-imageSm.jpg">
+                    <source media="(max-width: 414px)" srcset="./img/reviews-imageSm.jpg">
                     <img src="./img/reviews-image.jpg" alt="Фотография ростов чеснока">
                 </picture>
             </div>
@@ -392,7 +409,12 @@
                 сельськохозяйсвенной продукции в
                 несколько раз ниже.</p>
             <p class="reviews__text">Широкая линейка техники для чеснока позволит подстроиться под ваши запросы.</p>
-            <a class="reviews__button button" href="#">В каталог</a>
+
+            <div class="button--wrapper">
+                <button class="button-main button-main--red" type="button">
+                    В каталог
+                </button>
+            </div>
 
         </div>
 
@@ -462,7 +484,7 @@
         <h2>Нам доверяют</h2>
         <div class="container">
 
-            <div class="owl-carousel">
+            <div class="owl-carousel owl-theme">
                 <p class="carousel__item">
                     <img class="carousel__img" src="./img/agroterra.jpg" alt="Логотип компании: Агротерра">
                 </p>
@@ -482,8 +504,8 @@
                 <p class="carousel__item">
                     <img class="carousel__img" src="./img/redwest.jpg" alt="Красный Восток">
                 </p>
-
             </div>
+
 
         </div>
     </section>
@@ -544,7 +566,6 @@
         <a class="intrid" href="https://intrid.ru/">made in INTRID</a>
     </div>
 
-    <button class="scroll">&xlarr;</button>
 </footer>
 
 <div class="popup-map">
@@ -559,9 +580,10 @@
     </div>
 </div>
 
-<script src="./script/wow.min.js"></script>
+
 <script src="./script/jquery-3.3.1.min.js"></script>
-<script src="./script/owl.carousel.min.js"></script>
+<script src="./libs/owlcarousel/owl.carousel.min.js"></script>
+<script src="./script/wow.min.js"></script>
 <script src="./script/main.js"></script>
 </body>
 </html>

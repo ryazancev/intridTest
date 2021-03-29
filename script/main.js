@@ -8,8 +8,21 @@ const iconCross = document.querySelector('.header__button--cross');
 const navSite = document.querySelector('nav');
 const popupMap = document.querySelector('.popup-map');
 const tabsSection = document.querySelector('.compare');
-const scrollBtn = document.querySelector('.scroll');
 
+
+//Scroll Nav
+window.addEventListener('scroll', () => {
+    const navIcon = navSite.querySelectorAll('.nav__icon--side');
+
+    if (document.documentElement.scrollTop >= 76) {
+        navSite.style.position = 'sticky';
+        navSite.style.top = 0;
+        navSite.style.zIndex = 2;
+        navIcon.forEach(item => item.style.transform = `translateX(0)`)
+    } else {
+        navIcon.forEach(item => item.style.transform = '')
+    }
+})
 
 // Открываем меню по клику на бургер и открываем карту по клику на адрес
 pageHeader.addEventListener('click', evt => {
@@ -62,6 +75,7 @@ tabsSection.addEventListener('click', evt => {
     const potatoTab = document.querySelector('.compare__link--p');
     const onionTab = document.querySelector('.compare__link--o');
 
+
     if (target === garlicTab) {
         garlic.style.display = 'block';
         garlicTab.classList.add('compare__link--active');
@@ -95,7 +109,8 @@ tabsSection.addEventListener('click', evt => {
         potatoTab.classList.remove('compare__link--active');
     }
 
-});
+
+})
 
 
 //Видео
@@ -148,36 +163,45 @@ findVideos();
 
 //Анимация
 
-const wow = new WOW({
-    'mobile': false
-});
+new WOW().init();
 
-wow.init();
-
-//Owl-carousel
-
-$(document).ready(function () {
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 50,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 2,
-                nav: false,
-                dots: true
+//owlcarousel
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+        loop:true,
+        navText: ['&larr;', '&rarr;'],
+        margin:0,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:2,
+                dots: true,
             },
             768: {
                 items: 3,
-                nav: false,
-                dots: true
             },
-            1024: {
-                items: 5,
-                nav: true,
-                dots: false
+            1024:{
+                dots: false,
+                items:5,
             }
         }
-    });
-})
+    })
+});
+
+const carousel = document.querySelector('.owl-carousel');
+
+carousel.addEventListener('mouseover', evt => {
+    const target = evt.target;
+
+    if (target.matches('.owl-prev')) {
+        $(".owl-carousel").trigger('prev.owl.carousel');
+    }
+
+    if (target.matches('.owl-next')) {
+        $(".owl-carousel").trigger('next.owl.carousel');
+    }
+});
+
+
+
 
