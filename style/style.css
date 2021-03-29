@@ -1976,6 +1976,10 @@ footer li:nth-child(3n) {
     margin-bottom: 112px;
 }
 
+.hidden {
+    display: none;
+}
+
 .catalog__tab {
     text-align: center;
     width: 20.3%;

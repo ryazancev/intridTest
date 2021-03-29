@@ -11,210 +11,275 @@ const tabsSection = document.querySelector('.compare');
 
 
 //Scroll Nav
-window.addEventListener('scroll', () => {
-    const navIcon = navSite.querySelectorAll('.nav__icon--side');
-    const headLink = document.querySelector('.nav__link');
+const scrollNav = () => {
+    window.addEventListener('scroll', () => {
+        const navIcon = navSite.querySelectorAll('.nav__icon--side');
+        const headLink = document.querySelector('.nav__link');
 
-    if (document.documentElement.scrollTop >= 76) {
-        navSite.style.position = 'sticky';
-        navSite.style.top = 0;
-        navSite.style.zIndex = 2;
-        headLink.style.display = 'block';
-        navIcon.forEach(item => {
-            item.style.transform = `translateX(0)`;
-        })
-    } else {
-        headLink.style.display = '';
-        navIcon.forEach(item => item.style.transform = '')
-    }
-})
+        if (document.documentElement.scrollTop >= 76) {
+            navSite.style.position = 'sticky';
+            navSite.style.top = 0;
+            navSite.style.zIndex = 2;
+            headLink.style.display = 'block';
+            navIcon.forEach(item => {
+                item.style.transform = `translateX(0)`;
+            })
+        } else {
+            headLink.style.display = '';
+            navIcon.forEach(item => item.style.transform = '')
+        }
+    })
+};
+
+scrollNav();
+
 
 // Открываем меню по клику на бургер и открываем карту по клику на адрес
-pageHeader.addEventListener('click', evt => {
-    const target = evt.target;
+const toggleMenu = () => {
+    pageHeader.addEventListener('click', evt => {
+        const target = evt.target;
 
-    if (target.closest('.header__button')) {
-        iconBurger.classList.toggle('deactive');
-        iconCross.classList.toggle('deactive');
-        navSite.classList.toggle('menu-close');
-        overlay.classList.toggle('menu-close');
-    }
+        if (target.closest('.header__button')) {
+            iconBurger.classList.toggle('deactive');
+            iconCross.classList.toggle('deactive');
+            navSite.classList.toggle('menu-close');
+            overlay.classList.toggle('menu-close');
+        }
 
-    if (target.matches('#map')) {
-        evt.preventDefault();
-        popupMap.classList.add('popup-map--active');
-    }
-})
+        if (target.matches('#map')) {
+            evt.preventDefault();
+            popupMap.classList.add('popup-map--active');
+        }
+    })
 
 //Закрываем карту кликом на оверлей
 
-popupMap.addEventListener('click', () => {
-    popupMap.classList.remove('popup-map--active');
-})
+    popupMap.addEventListener('click', () => {
+        popupMap.classList.remove('popup-map--active');
+    })
 
 //Закрытие меню по клику на пункты
-navSite.addEventListener('click', evt => {
-    const target = evt.target;
+    navSite.addEventListener('click', evt => {
+        const target = evt.target;
 
-    if (target.matches('.nav__link')) {
-        navSite.classList.add('menu-close')
-        iconBurger.classList.toggle('deactive');
-        iconCross.classList.toggle('deactive');
-    } else {
-        navSite.classList.add('menu-close')
-        iconBurger.classList.toggle('deactive');
-        iconCross.classList.toggle('deactive');
-    }
-});
+        if (target.matches('.nav__link')) {
+            navSite.classList.add('menu-close')
+            iconBurger.classList.toggle('deactive');
+            iconCross.classList.toggle('deactive');
+        } else {
+            navSite.classList.add('menu-close')
+            iconBurger.classList.toggle('deactive');
+            iconCross.classList.toggle('deactive');
+        }
+    });
+
+};
+
+toggleMenu();
 
 //Табы
 
-if (tabsSection) {
-    tabsSection.addEventListener('click', evt => {
-        evt.preventDefault();
-        const target = evt.target;
+const tabs = () => {
+    if (tabsSection) {
+        tabsSection.addEventListener('click', evt => {
+            evt.preventDefault();
+            const target = evt.target;
 
-        const garlic = document.getElementById('garlic');
-        const potato = document.getElementById('potato');
-        const onion = document.getElementById('onion');
-        const garlicTab = document.querySelector('.compare__link--g');
-        const potatoTab = document.querySelector('.compare__link--p');
-        const onionTab = document.querySelector('.compare__link--o');
-
-
-        if (target === garlicTab) {
-            garlic.style.display = 'block';
-            garlicTab.classList.add('compare__link--active');
-
-            potato.style.display = 'none';
-            potatoTab.classList.remove('compare__link--active');
-
-            onion.style.display = 'none';
-            onionTab.classList.remove('compare__link--active');
-        }
-
-        if (target === potatoTab) {
-            potato.style.display = 'block';
-            potatoTab.classList.add('compare__link--active');
-
-            garlic.style.display = 'none';
-            garlicTab.classList.remove('compare__link--active');
-
-            onion.style.display = 'none';
-            onionTab.classList.remove('compare__link--active');
-        }
-
-        if (target === onionTab) {
-            onion.style.display = 'block';
-            onionTab.classList.add('compare__link--active');
-
-            garlic.style.display = 'none';
-            garlicTab.classList.remove('compare__link--active');
-
-            potato.style.display = 'none';
-            potatoTab.classList.remove('compare__link--active');
-        }
-    })
-}
+            const garlic = document.getElementById('garlic');
+            const potato = document.getElementById('potato');
+            const onion = document.getElementById('onion');
+            const garlicTab = document.querySelector('.compare__link--g');
+            const potatoTab = document.querySelector('.compare__link--p');
+            const onionTab = document.querySelector('.compare__link--o');
 
 
+            if (target === garlicTab) {
+                garlic.style.display = 'block';
+                garlicTab.classList.add('compare__link--active');
+
+                potato.style.display = 'none';
+                potatoTab.classList.remove('compare__link--active');
+
+                onion.style.display = 'none';
+                onionTab.classList.remove('compare__link--active');
+            }
+
+            if (target === potatoTab) {
+                potato.style.display = 'block';
+                potatoTab.classList.add('compare__link--active');
+
+                garlic.style.display = 'none';
+                garlicTab.classList.remove('compare__link--active');
+
+                onion.style.display = 'none';
+                onionTab.classList.remove('compare__link--active');
+            }
+
+            if (target === onionTab) {
+                onion.style.display = 'block';
+                onionTab.classList.add('compare__link--active');
+
+                garlic.style.display = 'none';
+                garlicTab.classList.remove('compare__link--active');
+
+                potato.style.display = 'none';
+                potatoTab.classList.remove('compare__link--active');
+            }
+        })
+    }
+};
+
+tabs();
 
 //Видео
+const video = () => {
+    function findVideos() {
+        const videos = document.querySelectorAll('.video');
 
-function findVideos() {
-    const videos = document.querySelectorAll('.video');
-
-    for (let i = 0; i < videos.length; i++) {
-        setupVideo(videos[i]);
+        for (let i = 0; i < videos.length; i++) {
+            setupVideo(videos[i]);
+        }
     }
-}
 
-function setupVideo(video) {
-    const link = video.querySelector('.video__link');
-    const media = video.querySelector('.video__media');
-    const button = video.querySelector('.video__button');
-    const id = parseMediaURL(media);
-    video.addEventListener('click', function () {
-        const iframe = createIframe(id);
-        link.remove();
-        button.remove();
-        video.appendChild(iframe);
-    });
-    link.removeAttribute('href');
-    video.classList.add('video--enabled');
-}
+    function setupVideo(video) {
+        const link = video.querySelector('.video__link');
+        const media = video.querySelector('.video__media');
+        const button = video.querySelector('.video__button');
+        const id = parseMediaURL(media);
+        video.addEventListener('click', function () {
+            const iframe = createIframe(id);
+            link.remove();
+            button.remove();
+            video.appendChild(iframe);
+        });
+        link.removeAttribute('href');
+        video.classList.add('video--enabled');
+    }
 
-function parseMediaURL(media) {
-    const regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault\.jpg/i;
-    const url = media.src;
-    const match = url.match(regexp);
-    return match[1];
-}
+    function parseMediaURL(media) {
+        const regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault\.jpg/i;
+        const url = media.src;
+        const match = url.match(regexp);
+        return match[1];
+    }
 
-function createIframe(id) {
-    const iframe = document.createElement('iframe');
-    iframe.setAttribute('allowfullscreen', '');
-    iframe.setAttribute('allow', 'autoplay');
-    iframe.setAttribute('src', generateURL(id));
-    iframe.classList.add('video__media');
-    return iframe;
-}
+    function createIframe(id) {
+        const iframe = document.createElement('iframe');
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.setAttribute('allow', 'autoplay');
+        iframe.setAttribute('src', generateURL(id));
+        iframe.classList.add('video__media');
+        return iframe;
+    }
 
-function generateURL(id) {
-    const query = '?rel=0&showinfo=0&autoplay=1';
-    return 'https://www.youtube.com/embed/' + id + query;
-}
+    function generateURL(id) {
+        const query = '?rel=0&showinfo=0&autoplay=1';
+        return 'https://www.youtube.com/embed/' + id + query;
+    }
 
-findVideos();
+    findVideos();
+};
+
+video();
+
+
 
 //Анимация
 
-new WOW().init();
+const animation = () => {
+    new WOW().init();
+};
+
+animation();
+
+
 
 //owlcarousel
-const carousel = document.querySelector('.owl-carousel');
 
-if (carousel) {
-    $(document).ready(function(){
-        carousel.owlCarousel({
-            loop:true,
-            navText: ['&larr;', '&rarr;'],
-            margin:0,
-            responsiveClass:true,
-            responsive:{
-                0:{
-                    items:1,
-                    dots: true,
-                },
-                360:{
-                    items:1,
-                    dots: true,
-                },
-                768: {
-                    items: 3,
-                },
-                1024:{
-                    dots: false,
-                    items:5,
+const carouselMain = () => {
+
+    const carousel = document.querySelector('.owl-carousel');
+
+    if (carousel) {
+        $(document).ready(function(){
+            carousel.owlCarousel({
+                loop:true,
+                navText: ['&larr;', '&rarr;'],
+                margin:0,
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        dots: true,
+                    },
+                    360:{
+                        items:1,
+                        dots: true,
+                    },
+                    768: {
+                        items: 3,
+                    },
+                    1024:{
+                        dots: false,
+                        items:5,
+                    }
                 }
-            }
-        })
-    });
+            })
+        });
 
-    carousel.addEventListener('mouseover', evt => {
+        carousel.addEventListener('mouseover', evt => {
+            const target = evt.target;
+
+            if (target.matches('.owl-prev')) {
+                $(".owl-carousel").trigger('prev.owl.carousel');
+            }
+
+            if (target.matches('.owl-next')) {
+                $(".owl-carousel").trigger('next.owl.carousel');
+            }
+        });
+    }
+};
+
+carouselMain();
+
+
+// Фильтр 2 страница
+
+const filter = () => {
+
+    const catalog = document.querySelector('.catalog');
+    const catalogTabsContainer = catalog.querySelector('.container');
+    const cards = catalog.querySelectorAll('.card__wrapper');
+
+
+
+    catalogTabsContainer.addEventListener('click', evt => {
         const target = evt.target;
 
-        if (target.matches('.owl-prev')) {
-            $(".owl-carousel").trigger('prev.owl.carousel');
+        for (const item of catalogTabsContainer.children) {
+            if (item === target) {
+                item.classList.add('tab-active');
+            } else {
+                item.classList.remove('tab-active');
+            }
         }
 
-        if (target.matches('.owl-next')) {
-            $(".owl-carousel").trigger('next.owl.carousel');
-        }
+        cards.forEach(item => {
+            if (target.dataset.filter !== item.dataset.filter) {
+                item.classList.add('hidden');
+
+            } else {
+                item.classList.remove('hidden');
+                item.parentElement.style.justifyContent = 'normal';
+                item.style.marginRight = `30px`;
+            }
+        })
+
     });
-}
 
+};
 
-
+filter();
 
 
