@@ -16,18 +16,23 @@ const scrollNav = () => {
         const navIcon = navSite.querySelectorAll('.nav__icon--side');
         const headLink = document.querySelector('.nav__link');
 
-        if (document.documentElement.scrollTop >= 76) {
-            navSite.style.position = 'sticky';
-            navSite.style.top = 0;
-            navSite.style.zIndex = 2;
-            headLink.style.display = 'block';
-            navIcon.forEach(item => {
-                item.style.transform = `translateX(0)`;
-            })
-        } else {
-            headLink.style.display = '';
-            navIcon.forEach(item => item.style.transform = '')
+        if (document.documentElement.clientWidth > 768) {
+            if (document.documentElement.scrollTop >= 76) {
+                navSite.style.position = 'sticky';
+                navSite.style.top = 0;
+                navSite.style.zIndex = 2;
+                navSite.style.boxShadow = `0px 5px 10px 2px rgba(34, 60, 80, 0.2)`;
+                headLink.style.display = 'block';
+                navIcon.forEach(item => {
+                    item.style.transform = `translateX(0)`;
+                })
+            } else {
+                headLink.style.display = '';
+                navSite.style.boxShadow = '';
+                navIcon.forEach(item => item.style.transform = '')
+            }
         }
+
     })
 };
 
@@ -54,9 +59,14 @@ const toggleMenu = () => {
 
 //Закрываем карту кликом на оверлей
 
-    popupMap.addEventListener('click', () => {
-        popupMap.classList.remove('popup-map--active');
-    })
+    popupMap.addEventListener('click', evt => {
+        const target = evt.target;
+        if (target.matches('.popup-map__button')) {
+            popupMap.classList.remove('popup-map--active');
+        } else {
+            popupMap.classList.remove('popup-map--active');
+        }
+    });
 
 //Закрытие меню по клику на пункты
     navSite.addEventListener('click', evt => {
@@ -183,7 +193,6 @@ const video = () => {
 video();
 
 
-
 //Анимация
 
 const animation = () => {
@@ -193,52 +202,40 @@ const animation = () => {
 animation();
 
 
-
 //owlcarousel
 
 const carouselMain = () => {
 
     const carousel = document.querySelector('.owl-carousel');
+    // const productSlider = document.querySelector('.product-slider');
 
-    if (carousel) {
-        $(document).ready(function(){
-            carousel.owlCarousel({
-                loop:true,
+    $(document).ready(function () {
+        if (carousel) {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
                 navText: ['&larr;', '&rarr;'],
-                margin:0,
-                responsiveClass:true,
-                responsive:{
-                    0:{
-                        items:1,
+                margin: 0,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
                         dots: true,
                     },
-                    360:{
-                        items:1,
+                    360: {
+                        items: 2,
                         dots: true,
                     },
                     768: {
                         items: 3,
                     },
-                    1024:{
+                    1024: {
                         dots: false,
-                        items:5,
+                        items: 5,
                     }
                 }
             })
-        });
-
-        carousel.addEventListener('mouseover', evt => {
-            const target = evt.target;
-
-            if (target.matches('.owl-prev')) {
-                $(".owl-carousel").trigger('prev.owl.carousel');
-            }
-
-            if (target.matches('.owl-next')) {
-                $(".owl-carousel").trigger('next.owl.carousel');
-            }
-        });
-    }
+        }
+    });
 };
 
 carouselMain();
@@ -249,34 +246,35 @@ carouselMain();
 const filter = () => {
 
     const catalog = document.querySelector('.catalog');
-    const catalogTabsContainer = catalog.querySelector('.container');
-    const cards = catalog.querySelectorAll('.card__wrapper');
 
+    if (catalog) {
+        const catalogTabsContainer = catalog.querySelector('.container');
+        const cards = catalog.querySelectorAll('.card__wrapper');
 
+        catalogTabsContainer.addEventListener('click', evt => {
+            const target = evt.target;
 
-    catalogTabsContainer.addEventListener('click', evt => {
-        const target = evt.target;
-
-        for (const item of catalogTabsContainer.children) {
-            if (item === target) {
-                item.classList.add('tab-active');
-            } else {
-                item.classList.remove('tab-active');
+            for (const item of catalogTabsContainer.children) {
+                if (item === target) {
+                    item.classList.add('tab-active');
+                } else {
+                    item.classList.remove('tab-active');
+                }
             }
-        }
 
-        cards.forEach(item => {
-            if (target.dataset.filter !== item.dataset.filter) {
-                item.classList.add('hidden');
+            cards.forEach(item => {
+                if (target.dataset.filter !== item.dataset.filter) {
+                    item.classList.add('hidden');
 
-            } else {
-                item.classList.remove('hidden');
-                item.parentElement.style.justifyContent = 'normal';
-                item.style.marginRight = `30px`;
-            }
-        })
+                } else {
+                    item.classList.remove('hidden');
+                    item.parentElement.style.justifyContent = 'normal';
+                    item.style.marginRight = `30px`;
+                }
+            })
 
-    });
+        });
+    }
 
 };
 
