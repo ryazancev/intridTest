@@ -196,7 +196,12 @@ video();
 //Анимация
 
 const animation = () => {
+    const feature = document.querySelector('.features');
+
+    if (feature) {
+
     new WOW().init();
+    }
 };
 
 animation();
@@ -279,6 +284,44 @@ const filter = () => {
 };
 
 filter();
+
+
+//product-slider
+
+const productSlider = () => {
+    const productSliderMain = document.querySelector('.product-slider__main');
+    const productSliderBottom = document.querySelector('.product-slider__bottom');
+
+    if (productSliderMain && productSliderBottom) {
+
+        $('.product-slider__main').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.product-slider__bottom'
+        });
+
+        $('.product-slider__bottom').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            customPaging: 30,
+            asNavFor: '.product-slider__main',
+            dots: false,
+            arrows: true,
+            variableWidth: true,
+            prevArrow: `<button type="button" id="slick-prev">&larr;</button>`,
+            nextArrow: `<button type="button" id="slick-next">&rarr;</button>`,
+            centerMode: true,
+            focusOnSelect: true
+        });
+
+    }
+
+
+};
+
+productSlider();
 
 
 // modal order
