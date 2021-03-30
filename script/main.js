@@ -299,21 +299,38 @@ const productSlider = () => {
             slidesToScroll: 1,
             arrows: false,
             fade: true,
-            asNavFor: '.product-slider__bottom'
+            asNavFor: '.product-slider__bottom',
+            responsive: [
+                {
+                    breakpoint: 769,
+                    settings: {
+                        dots: true,
+                    }
+                }
+            ]
         });
 
         $('.product-slider__bottom').slick({
             slidesToShow: 3,
             slidesToScroll: 1,
-            customPaging: 30,
             asNavFor: '.product-slider__main',
             dots: false,
-            arrows: true,
             variableWidth: true,
             prevArrow: `<button type="button" id="slick-prev">&larr;</button>`,
             nextArrow: `<button type="button" id="slick-next">&rarr;</button>`,
-            centerMode: true,
-            focusOnSelect: true
+            centerMode: false,
+            focusOnSelect: true,
+            responsive: [
+                {
+                    breakpoint: 1025,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
+
+
         });
 
     }
