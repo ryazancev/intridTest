@@ -292,7 +292,7 @@ const productSlider = () => {
     const productSliderMain = document.querySelector('.product-slider__main');
     const productSliderBottom = document.querySelector('.product-slider__bottom');
 
-    if (productSliderMain && productSliderBottom) {
+    if (productSliderMain) {
 
         $('.product-slider__main').slick({
             slidesToShow: 1,
@@ -302,35 +302,26 @@ const productSlider = () => {
             asNavFor: '.product-slider__bottom',
             responsive: [
                 {
-                    breakpoint: 769,
+                    breakpoint: 426,
                     settings: {
                         dots: true,
                     }
                 }
             ]
         });
+    }
 
+    if (productSliderBottom) {
         $('.product-slider__bottom').slick({
             slidesToShow: 3,
             slidesToScroll: 1,
             asNavFor: '.product-slider__main',
             dots: false,
-            variableWidth: true,
-            prevArrow: `<button type="button" id="slick-prev">&larr;</button>`,
-            nextArrow: `<button type="button" id="slick-next">&rarr;</button>`,
-            centerMode: false,
+            arrows: true,
+            prevArrow: `<button type="button" class="slick-prev">&larr;</button>`,
+            nextArrow: `<button type="button" class="slick-next">&rarr;</button>`,
             focusOnSelect: true,
-            responsive: [
-                {
-                    breakpoint: 1025,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                    }
-                }
-            ]
-
-
+            variableWidth: true,
         });
 
     }
