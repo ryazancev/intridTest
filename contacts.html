@@ -9,7 +9,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-    <link rel="manifest" href="./favicon/site.webmanifest">
     <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#da1713">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
@@ -128,25 +127,52 @@
     </ul>
 
     <section class="contacts">
-        
+
         <h1>Заказать технику для чеснока</h1>
-        
+
         <div class="container">
             <p class="contacts__name">
-                ИП Медведев Евгений Павлович г. Воронеж:
+                ИП Медведев Евгений Павлович
             </p>
-            <a class="contacts__phone" href="tel:8(919)249-39-94">Тел.: 8-919-249-39-94</a>
-            <a class="contacts__email" href="mailto:medvedev-evgenii@inbox.ru">E-mail: medvedev-evgenii@inbox.ru</a>
+            <a class="contacts__phone" href="tel:8(919)249-39-94">
+                <svg width="16" height="16">
+                    <use xlink:href="./img/iconsHeader.svg#phone"></use>
+                </svg>
+                Тел.: 8-919-249-39-94
+            </a>
+            <a class="contacts__email" href="mailto:medvedev-evgenii@inbox.ru">
+                <svg width="16" height="16" fill="#250404">
+                    <use xlink:href="./img/iconsMenu.svg#about"></use>
+                </svg>
+                E-mail: medvedev-evgenii@inbox.ru
+            </a>
             <p class="contacts__info">ИНН: 570801012077</p>
             <p class="contacts__info">ОГРН: 316366800144092</p>
             <p class="contacts__info">Банк: ЦЕНТРАЛЬНО-ЧЕРНОЗЕМНЫЙ БАНК ПАО СБЕРБАНК, г. ВОРОНЕЖ</p>
             <p class="contacts__info">р/с: 40802810713000009170</p>
             <p class="contacts__info">БИК: 042007681</p>
             <p class="contacts__info">к/с: 30101810600000000681</p>
+
+            <form class="contacts__form">
+                <p>Напишите нам</p>
+                <input type="text" placeholder="Имя">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Ваше сообщение"></textarea>
+                <small>Нажимая кнопку, Вы даёте <strong>согласие на обработку персональных данных</strong></small>
+                <div class="button--wrapper">
+                    <button class="button-main" type="submit">
+                        Отправить
+                    </button>
+                </div>
+            </form>
         </div>
-        
+
+
+
     </section>
 
+    <script type="text/javascript" charset="utf-8" async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aff5fbe0b539bde8197cb526638438c22849060593b39a81ef2e0ca2cf193d28a&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
 
 </main>
 
@@ -224,7 +250,6 @@
         </button>
     </div>
 </div>
-
 
 
 <script src="./script/main.js"></script>
