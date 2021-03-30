@@ -1323,6 +1323,7 @@ nav {
 
 .reviews .container {
     display: block;
+    align-items: normal;
 }
 
 .reviews__image {
@@ -1368,6 +1369,16 @@ nav {
         margin-bottom: 20px;
         font-size: 16px;
         line-height: 18px;
+    }
+
+    .reviews__title {
+        font-size: 42px;
+    }
+}
+
+@media screen and (max-width: 865px) {
+    .reviews__title {
+        font-size: 38px;
     }
 }
 
@@ -2036,7 +2047,7 @@ footer li:nth-child(3n) {
 .catalog__info {
     background: #FAFAFA;
     height: 154px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: left;
 }
 
@@ -2242,6 +2253,10 @@ footer li:nth-child(3n) {
     margin-bottom: 64px;
 }
 
+.product .container {
+    align-items: normal;
+}
+
 .product h1 {
     width: 100%;
     margin: 0 0 24px;
@@ -2328,10 +2343,6 @@ footer li:nth-child(3n) {
 
     .product__link:last-of-type {
         margin-bottom: 26px;
-    }
-
-    .product-slider {
-        margin-top: -50px;
     }
 
 }
@@ -2528,6 +2539,13 @@ hr {
 }
 
 @media screen and (max-width: 1024px) {
+    .price hr {
+        margin-top: 64px;
+    }
+    .price__title {
+        margin-bottom: 64px;
+    }
+
     .price__link img {
         display: none;
     }
@@ -2565,8 +2583,12 @@ hr {
         text-align: right;
     }
 
-    .price__list--3x,
-    .price__list--4x,
+    .price__list--3x {
+        display: none;
+    }
+    .price__list--4x {
+        display: none;
+    }
     .price__list--5x {
         display: none;
     }
@@ -2893,4 +2915,21 @@ article {
     .order .order__title {
         font-size: 24px;
     }
+}
+
+/* Contacts */
+.contacts .container {
+    flex-direction: column;
+    align-items: normal;
+    height: 300px;
+}
+
+.contacts p,
+.contacts a {
+    font-size: 18px;
+}
+
+.contacts p:hover,
+.contacts a:hover {
+    opacity: 0.7;
 }

@@ -308,7 +308,71 @@ const modalOrder = () => {
 
 modalOrder();
 
+// page 3 tabs
 
+const tabPrice = () => {
+
+    const price = document.querySelector('.price');
+
+    if (price) {
+        const tabLinks = price.querySelectorAll('.price__link');
+        const tabContainer = price.querySelector('.container');
+        const tab2x = price.querySelector('.price__list--2x');
+        const tab3x = price.querySelector('.price__list--3x');
+        const tab4x = price.querySelector('.price__list--4x');
+        const tab5x = price.querySelector('.price__list--5x');
+
+        tabContainer.addEventListener('click', evt => {
+            const target = evt.target;
+
+            for (const link of tabLinks) {
+                if (target === link) {
+                    link.classList.add('price__link--active')
+                } else {
+                    link.classList.remove('price__link--active');
+                }
+            }
+
+
+            if (target.dataset.filter === '2x') {
+
+                tab2x.style.display = 'block';
+                tab3x.style.display = 'none';
+                tab4x.style.display = 'none';
+                tab5x.style.display = 'none';
+            }
+
+
+            if (target.dataset.filter === '3x') {
+
+                tab2x.style.display = 'none';
+                tab3x.style.display = 'block';
+                tab4x.style.display = 'none';
+                tab5x.style.display = 'none';
+            }
+
+            if (target.dataset.filter === '3x') {
+                tab2x.style.display = 'none';
+                tab3x.style.display = 'none';
+                tab4x.style.display = 'block';
+                tab5x.style.display = 'none';
+            }
+
+            if (target.dataset.filter === '4x') {
+                tab2x.style.display = 'none';
+                tab3x.style.display = 'none';
+                tab4x.style.display = 'none';
+                tab5x.style.display = 'block';
+            }
+
+
+        })
+
+    }
+
+};
+
+tabPrice();
 
 
 
