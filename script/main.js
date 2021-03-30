@@ -281,3 +281,34 @@ const filter = () => {
 filter();
 
 
+// modal order
+
+const modalOrder = () => {
+    const modal = document.querySelector('.modal__order');
+    const priceContainer = document.querySelector('.price');
+
+    if (priceContainer) {
+        priceContainer.addEventListener('click', evt => {
+            const target = evt.target;
+
+            if (target.closest('.button--wrapper')) {
+                modal.style.display = 'block';
+            }
+        })
+    }
+
+    if (modal) {
+        const modalClose = modal.querySelector('.order__button');
+
+        modalClose.addEventListener('click', () => {
+            modal.style.display = '';
+        })
+    }
+};
+
+modalOrder();
+
+
+
+
+
