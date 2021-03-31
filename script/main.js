@@ -312,6 +312,8 @@ const productSlider = () => {
                 }
             ]
         });
+
+        $('a[data-rel^=lightcase]').lightcase();
     }
 
     if (productSliderBottom) {

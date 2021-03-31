@@ -15,6 +15,7 @@
 
     <title>Сажалка для чеснока</title>
 
+    <link rel="stylesheet" href="./style/lightcase.css">
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="./style/style.css">
 </head>
@@ -133,22 +134,26 @@
 
             <div class="product-slider">
                 <div class="product-slider__main">
-                    <picture>
-                        <!--                        <source media="(max-width: 414px)" srcset="./img/cardMainMobile.jpg">-->
-                        <img src="./img/card-slide-1.jpg" alt="Сажалка для чеснока">
-                    </picture>
-                    <picture>
-                        <!--                        <source media="(max-width: 414px)" srcset="./img/cardMainMobile.jpg">-->
-                        <img src="./img/card-slide-2.jpg" alt="Сажалка для чеснока">
-                    </picture>
-                    <picture>
-                        <!--                        <source media="(max-width: 414px)" srcset="./img/cardMainMobile.jpg">-->
-                        <img src="./img/card-slide-3.jpg" alt="Сажалка для чеснока">
-                    </picture>
-                    <picture>
-                        <!--                        <source media="(max-width: 414px)" srcset="./img/cardMainMobile.jpg">-->
-                        <img src="./img/card-slide-4.jpg" alt="Сажалка для чеснока">
-                    </picture>
+                    <a href="./img/card-slide-1.jpg" data-rel="lightcase">
+                        <picture>
+                            <img src="./img/card-slide-1.jpg" alt="">
+                        </picture>
+                    </a>
+                    <a href="./img/card-slide-2.jpg" data-rel="lightcase">
+                        <picture>
+                            <img src="./img/card-slide-2.jpg" alt="">
+                        </picture>
+                    </a>
+                    <a href="./img/card-slide-3.jpg" data-rel="lightcase">
+                        <picture>
+                            <img src="./img/card-slide-3.jpg" alt="">
+                        </picture>
+                    </a>
+                    <a href="./img/card-slide-4.jpg" data-rel="lightcase">
+                        <picture>
+                            <img src="./img/card-slide-4.jpg" alt="">
+                        </picture>
+                    </a>
                 </div>
 
                 <div class="product-slider__bottom">
@@ -167,7 +172,7 @@
 
                 <div class="button--wrapper">
                     <button class="button-main button-main--red" type="button">
-                        В каталог
+                        Заказать
                     </button>
                 </div>
 
@@ -222,7 +227,6 @@
     </section>
 
 
-
     <section class="price">
 
         <p class="price__title">Прайс-лист на сажалки для чеснока</p>
@@ -230,20 +234,20 @@
         <div class="container">
 
             <a class="price__link price__link--2x price__link--active" data-filter="2x">
-                <img src="./img/cardSmall.jpg" alt="Сажалка для чеснока">
-                2-х рядная
+                <img src="./img/card-slide-1-sm.jpg" alt="Сажалка для чеснока">
+               <span>2-х рядная</span>
             </a>
             <a class="price__link price__link--3x" data-filter="3x">
-                <img src="./img/cardSmall.jpg" alt="Сажалка для чеснока">
-                3-х рядная
+                <img src="./img/card-slide-2-sm.jpg" alt="Сажалка для чеснока">
+                <span>3-х рядная</span>
             </a>
             <a class="price__link price__link--4x" data-filter="4x">
-                <img src="./img/cardSmall.jpg" alt="Сажалка для чеснока">
-                4-х рядная
+                <img src="./img/card-slide-3-sm.jpg" alt="Сажалка для чеснока">
+                <span>4-х рядная</span>
             </a>
             <a class="price__link price__link--5x" data-filter="5x">
-                <img src="./img/cardSmall.jpg" alt="Сажалка для чеснока">
-                5-ти рядная
+                <img src="./img/card-slide-4-sm.jpg" alt="Сажалка для чеснока">
+                <span>5-ти рядная</span>
             </a>
 
             <ul class="price__list price__list--head">
@@ -259,6 +263,7 @@
             </ul>
 
             <ul class="price__list price__list--2x" data-filter="2x">
+                <li>2-х рядная</li>
                 <li>130</li>
                 <li>100</li>
                 <li>105</li>
@@ -266,8 +271,10 @@
                 <li>180</li>
                 <li>0,16</li>
                 <li>37-55</li>
-                <li>260 000</li>
-                <li>230 000</li>
+                <li>
+                    <span class="line-throw">260 000</span>
+                    <span class="bold">230 000</span>
+                </li>
                 <li>
                     <div class="button--wrapper">
                         <button class="button-main" type="button">
@@ -278,6 +285,7 @@
             </ul>
 
             <ul class="price__list price__list--3x" data-filter="3x">
+                <li>3-х рядная</li>
                 <li>130</li>
                 <li>150</li>
                 <li>105</li>
@@ -285,8 +293,11 @@
                 <li>280</li>
                 <li>0,24</li>
                 <li>37-55</li>
-                <li>330 000</li>
-                <li>300 000</li>
+                <li>
+                    <span class="line-throw">330 000</span>
+                    <span class="bold">300 000</span>
+                </li>
+
                 <li>
                     <div class="button--wrapper">
                         <button class="button-main" type="button">
@@ -297,6 +308,7 @@
             </ul>
 
             <ul class="price__list price__list--4x" data-filter="4x">
+                <li>4-х рядная</li>
                 <li>130</li>
                 <li>195</li>
                 <li>105</li>
@@ -304,8 +316,10 @@
                 <li>450</li>
                 <li>0,32</li>
                 <li>37-55</li>
-                <li>405 000</li>
-                <li>365 000</li>
+                <li>
+                    <span class="line-throw">405 000</span>
+                    <span class="bold">365 000</span>
+                </li>
                 <li>
                     <div class="button--wrapper">
                         <button class="button-main" type="button">
@@ -316,6 +330,7 @@
             </ul>
 
             <ul class="price__list price__list--5x" data-filter="5x">
+                <li>5-ти рядная</li>
                 <li>130</li>
                 <li>240</li>
                 <li>105</li>
@@ -323,8 +338,10 @@
                 <li>560</li>
                 <li>0,4</li>
                 <li>37-55</li>
-                <li>485 000</li>
-                <li>440 000</li>
+                <li>
+                    <span class="line-throw">485 000</span>
+                    <span class="bold">440 000</span>
+                </li>
                 <li>
                     <div class="button--wrapper">
                         <button class="button-main" type="button">
@@ -343,8 +360,7 @@
         </div>
 
 
-
-        <div class="container">
+        <div class="container container--column">
             <p>
                 Навесные сажалки для чеснока предназначены для посадки семян луковичной формы , таких как чеснок,
                 лук-севок,
@@ -387,10 +403,10 @@
             <div class="card__wrapper">
                 <a href="#" class="card">
                     <picture>
-                        <source srcset="./img/cardSmall.jpg" media="(max-width: 768px)">
-                        <img src="./img/card-1.jpg" alt="Машинка очистки чеснока">
+                        <source srcset="./img/card-1-tb.jpg" media="(max-width: 768px)">
+                        <img src="./img/card-1.jpg" alt="Сажалка для чеснока четырехрядная">
                     </picture>
-                    <p class="card__descr">Машинка очистки чеснока</p>
+                    <p class="card__descr">Сажалка для чеснока четырехрядная</p>
                     <span class="card__price card__price--new">от 235 000 ₽</span>
                     <span class="card__price card__price--old">от 270 000 ₽</span>
                     <div class="button--wrapper card__button--wrapper">
@@ -404,7 +420,7 @@
             <div class="card__wrapper">
                 <a href="#" class="products__card card">
                     <picture>
-                        <source srcset="./img/cardSmall.jpg" media="(max-width: 768px)">
+                        <source srcset="./img/card-2-tb.jpg" media="(max-width: 768px)">
                         <img src="./img/card-2.jpg" alt="Машинка очистки чеснока">
                     </picture>
                     <p class="card__descr">Машинка очистки чеснока</p>
@@ -421,10 +437,10 @@
             <div class="card__wrapper">
                 <a href="#" class="products__card card">
                     <picture>
-                        <source srcset="./img/cardSmall.jpg" media="(max-width: 768px)">
-                        <img src="./img/card-3.jpg" alt="Сортровщик зубков чеснока">
+                        <source srcset="./img/card-3-tb.jpg" media="(max-width: 768px)">
+                        <img src="./img/card-3.jpg" alt="Калибровщик/сортировщик зубков чеснока">
                     </picture>
-                    <p class="card__descr">Машинка очистки чеснока</p>
+                    <p class="card__descr">Калибровщик/сортировщик зубков чеснока</p>
                     <span class="card__price card__price--new">от 235 000 ₽</span>
                     <span class="card__price card__price--old">от 270 000 ₽</span>
                     <div class="button--wrapper card__button--wrapper">
@@ -438,10 +454,10 @@
             <div class="card__wrapper">
                 <a href="#" class="products__card card">
                     <picture>
-                        <source srcset="./img/cardSmall.jpg" media="(max-width: 768px)">
-                        <img src="./img/card-4.jpg" alt="Калибровщик головок чеснова">
+                        <source srcset="./img/card-4-tb.jpg" media="(max-width: 768px)">
+                        <img src="./img/card-4.jpg" alt="Калибровщик головок чеснока">
                     </picture>
-                    <p class="card__descr">Машинка очистки чеснока</p>
+                    <p class="card__descr">Калибровщик головок чеснока</p>
                     <span class="card__price card__price--new">от 235 000 ₽</span>
                     <span class="card__price card__price--old">от 270 000 ₽</span>
                     <div class="button--wrapper card__button--wrapper">
@@ -613,6 +629,7 @@
 
 <script src="./script/jquery-3.3.1.min.js"></script>
 <script src="./script/slick.min.js"></script>
+<script src="./script/lightcase.js"></script>
 <script src="./script/main.js"></script>
 
 </body>
