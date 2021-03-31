@@ -200,9 +200,9 @@ const animation = () => {
 
     if (feature) {
 
-    new WOW().init({
-        mobile: false,
-    });
+        new WOW().init({
+            mobile: false,
+        });
     }
 };
 
@@ -341,27 +341,118 @@ productSlider();
 const modalOrder = () => {
     const modal = document.querySelector('.modal__order');
     const priceContainer = document.querySelector('.price');
+    const productDescr = document.querySelector('.product__description');
+    const productButton = productDescr.querySelector('.button-main');
 
-    if (priceContainer) {
+    if (productDescr) {
+        productButton.addEventListener('click', () => {
+            modal.style.display = 'block';
+        });
+
+        modal.addEventListener('click', evt => {
+            const target = evt.target;
+
+            if (target.closest('.order__button')) {
+                modal.style.display = '';
+            } else if (target.matches('.modal__order')) {
+                modal.style.display = '';
+            }
+        });
+
         priceContainer.addEventListener('click', evt => {
             const target = evt.target;
 
-            if (target.closest('.button--wrapper')) {
+            const orderModal = (selectorColumn, selectorLink) => {
+                //Находим все li с классом price__list--2x
+                const orderList = priceContainer.querySelector(selectorColumn).children;
+                //Находим фото товара
+                const photo = priceContainer.querySelector(selectorLink).children[0].src;
+                //Находим модель товара
+                const title = orderList[0].textContent;
+                //Находим его старую цену
+                const priceOld = orderList[8].children[0].textContent;
+                //Находим его новую цену
+                const priceNew = orderList[8].children[1].textContent;
+                //Находим модалку
+                const orderCard = modal.querySelector('.order__card');
+                //Записываем в модалку данные выбранного товара
+                orderCard.innerHTML = `
+                    <img src="${photo}" width="170" alt="Сажалка для чеснока двухрядная">
+                    <p class="card__descr">Сажалка для чеснока ${title}</p>
+                    <span class="card__price card__price--new">${priceNew} ₽</span>
+                    <span class="card__price card__price--old">${priceOld} ₽</span>
+                `;
+
+                //Открываем модалку
                 modal.style.display = 'block';
+            };
+
+            if (target.dataset.button === '2x') {
+                orderModal('.price__list--2x', '.price__link--2x');
+            }
+
+            if (target.dataset.button === '3x') {
+                orderModal('.price__list--3x', '.price__link--3x');
+            }
+
+            if (target.dataset.button === '4x') {
+                orderModal('.price__list--4x', '.price__link--4x');
+            }
+
+            if (target.dataset.button === '5x') {
+                orderModal('.price__list--5x', '.price__link--5x');
             }
         })
     }
 
-    if (modal) {
-        const modalClose = modal.querySelector('.order__button');
-
-        modalClose.addEventListener('click', () => {
-            modal.style.display = '';
-        })
-    }
 };
 
 modalOrder();
+
+//Order Form
+
+const sendOrder = () => {
+    const orderForm = document.querySelector('.order__form');
+    const orderSuccess = document.querySelector('.order--success');
+    const order = document.querySelector('.order');
+
+    orderForm.addEventListener('submit', () => {
+        order.style.display = 'none';
+        orderSuccess.style.display = 'block';
+    });
+
+    // orderForm.addEventListener('submit', evt => {
+    //     evt.preventDefault();
+    //
+    //     const postData = (body, url) => fetch(url, {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(body)
+    //     });
+    //
+    //     const formData = new FormData(orderForm);
+    //     const body = {};
+    //
+    //     formData.forEach((value, key) => {
+    //         body[key] = value;
+    //     });
+    //
+    //     postData(body)
+    //         .then(response => {
+    //             if (response.status !== 200) throw new Error('status network not 200');
+    //             order.style.display = 'none';
+    //             orderSuccess.style.display = 'block';
+    //         })
+    //         .catch(error => {
+    //             console.error(error);
+    //         });
+    //
+    // });
+};
+
+sendOrder();
 
 // page 3 tabs
 
@@ -419,12 +510,8 @@ const tabPrice = () => {
                 tab4x.style.display = 'none';
                 tab5x.style.display = 'block';
             }
-
-
-        })
-
+        });
     }
-
 };
 
 tabPrice();
