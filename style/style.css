@@ -3046,25 +3046,21 @@ article {
 
 .contacts .container {
     align-items: normal;
+    margin-bottom: 16px;
 }
 
 .contacts__group {
     width: 48%;
 }
 
-.contacts__data {
-    width: 48%;
-}
-
 .contacts p,
 .contacts a {
     font-size: 18px;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 
 .contacts__licence {
     font-weight: bold;
-    margin: 16px 0;
 }
 
 .contacts a:hover {
@@ -3080,10 +3076,11 @@ article {
 }
 
 .contacts__image {
+    width: 40%;
     margin-bottom: 16px;
 }
 .contacts__form {
-    width: 100%;
+    width: 48%;
 }
 
 .contacts__form input {
@@ -3128,51 +3125,49 @@ textarea {
     padding: 13px 16px;
 }
 
-@media screen and (max-width: 1216px) {
-
-    .contacts__info:last-of-type {
-        margin-bottom: 20px;
-    }
-
+@media screen and (max-width: 912px) {
     .contacts .container {
-        flex-flow: column;
-        align-items: normal;
-        height: 1000px;
+        flex-wrap: wrap;
+        margin-bottom: 32px;
     }
 
-    .contacts__form input{
-        width: 30%;
+    .contacts__image {
+        width: 60%;
+        margin-bottom: 16px;
     }
 
-    textarea {
-        width: 60.4%;
+    .contacts__form {
+        width: 60%;
+    }
+
+    .contacts__group {
+        width: 60%;
     }
 }
 
 @media screen and (max-width: 768px) {
+    .contacts__form {
+        width: 70%;
+    }
+
     .contacts__group {
         width: 100%;
     }
+}
 
-    .contacts__data {
+@media screen and (max-width: 640px) {
+    .contacts__form {
         width: 100%;
     }
 
-    .contacts__form input{
-        width: 49.6%;
-    }
-
-    textarea {
+    .contacts__form input {
         width: 100%;
-    }
-
-    .contacts__form p {
-        font-size: 28px;
     }
 }
 
-@media screen and (max-width: 414px) {
-    .contacts__form input{
-        width: 100%;
+
+@media screen and (max-width: 375px) {
+    .contacts__form input {
+        height: 38px;
     }
 }
