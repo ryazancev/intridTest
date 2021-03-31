@@ -200,7 +200,9 @@ const animation = () => {
 
     if (feature) {
 
-    new WOW().init();
+    new WOW().init({
+        mobile: false,
+    });
     }
 };
 
