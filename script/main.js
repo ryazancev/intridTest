@@ -329,7 +329,6 @@ const productSlider = () => {
 
     }
 
-
 };
 
 productSlider();
