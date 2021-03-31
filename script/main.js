@@ -20,7 +20,7 @@ const scrollNav = () => {
             if (document.documentElement.scrollTop >= 76) {
                 navSite.style.position = 'sticky';
                 navSite.style.top = 0;
-                navSite.style.zIndex = 2;
+                navSite.style.zIndex = 9999;
                 navSite.style.boxShadow = `0px 5px 10px 2px rgba(34, 60, 80, 0.2)`;
                 headLink.style.display = 'block';
                 navIcon.forEach(item => {
@@ -302,9 +302,10 @@ const productSlider = () => {
             asNavFor: '.product-slider__bottom',
             responsive: [
                 {
-                    breakpoint: 426,
+                    breakpoint: 571,
                     settings: {
                         dots: true,
+                        swipe: true,
                     }
                 }
             ]
