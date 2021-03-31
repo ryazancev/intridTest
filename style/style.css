@@ -2737,6 +2737,10 @@ footer li:nth-child(3n) {
     .price__list--head {
         padding-bottom: 50px;
     }
+
+    .price__list .button--wrapper {
+        width: 150px;
+    }
 }
 
 @media screen and (max-width: 999px) {
@@ -2749,7 +2753,12 @@ footer li:nth-child(3n) {
         display: none;
     }
 
-    .price__list:not(.price__list--head) li:last-child {
+    .price__link span {
+        display: block;
+    }
+
+    .price__list:not(.price__list--head) li:last-child,
+    .price__list:not(.price__list--head) li:first-child{
         display: none;
     }
 
@@ -2762,12 +2771,8 @@ footer li:nth-child(3n) {
     }
 
     .price__list--head {
-        padding-bottom: 33px;
+        padding-bottom: 0;
         width: 80%;
-    }
-
-    .price__list li:nth-child(2n) {
-        background-color: #F3F4F6;
     }
 
     .price__list--head li:nth-child(2n) {
@@ -2817,6 +2822,7 @@ footer li:nth-child(3n) {
     }
 
     .price .container + .button--wrapper {
+        margin-top: 16px;
         display: block;
     }
 

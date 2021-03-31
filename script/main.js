@@ -387,6 +387,10 @@ const modalOrder = () => {
                 modal.style.display = 'block';
             };
 
+            if (target.matches('.button-main')) {
+                modal.style.display = 'block';
+            }
+
             if (target.dataset.button === '2x') {
                 orderModal('.price__list--2x', '.price__link--2x');
             }
